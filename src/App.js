@@ -2,7 +2,7 @@ import './index.css';
 import Title from './Title';
 import NavBar from './NavBar';
 import Video from './Video';
-import About from './About';
+import About from './about/About';
 import Contact from './contact/Contact';
 import Footer from './Footer';
 
