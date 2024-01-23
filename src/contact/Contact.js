@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import { FaInstagram } from "react-icons/fa";
 
 function Contact(props) {
     return (
@@ -22,8 +21,6 @@ function Contact(props) {
             title="Pinnacle - Nathan Kelly"
             email="" 
             phoneNumber="1-800-769-3322"/>
-
-            <a href="https://www.instagram.com/rhythmmessengers/"><FaInstagram /></a>
         </div>
     );
 }
