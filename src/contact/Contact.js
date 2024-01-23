@@ -21,8 +21,6 @@ function Contact(props) {
             title="Pinnacle - Nathan Kelly"
             email="" 
             phoneNumber="1-800-769-3322"/>
-
-            <a href="https://www.instagram.com/rhythmmessengers/">Instagram icon</a>
         </div>
     );
 }
