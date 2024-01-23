@@ -3,7 +3,7 @@ import React from 'react';
 function Footer(props) {
     return (
         <div>
-            <h1>Footer</h1>
+            <p>© 2020 Rhythm Messengers. Site by www.PromoBooth.com</p>
         </div>
     );
 }
