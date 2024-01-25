@@ -45,10 +45,11 @@ function NavBar(props) {
   };
     return (
     <AppBar 
-    position="static" 
-    sx={{backgroundColor: '#FFC080'}}>
+      style={{position: 'fixed'}}
+      sx={{backgroundColor: '#FFC080'}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters >
+          {/* This Typography element renders on desktop screen size */}
           <Typography
             variant="h6"
             noWrap
@@ -68,6 +69,7 @@ function NavBar(props) {
             Rhythm Messengers
           </Typography>
 
+          {/**This Box is for small screen sizes */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -97,16 +99,21 @@ function NavBar(props) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({page, route}) => (
-                <MenuItem 
-                  key={page} 
-                  onClick={handleCloseNavMenu}
-                  component={Link}>
-                  {page}
-                </MenuItem>
+              {pages.map(({page, route, id}) => (
+                <ScrollIntoView selector={id} key={page}>
+                    <MenuItem 
+                      key={page} 
+                      onClick={handleCloseNavMenu}
+                      component={Link}
+                      to={route ? route:null}
+                      >
+                      {page}
+                    </MenuItem>
+                  </ScrollIntoView>
               ))}
             </Menu>
           </Box>
+          {/*This Typography component is for smaller screen sizes */}
           <Typography
             variant="h5"
             noWrap
@@ -126,7 +133,9 @@ function NavBar(props) {
             
             Rhythm Messengers
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+          {/**This Box is for desktop screen size */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:'space-evenly' }}>
             {pages.map(({page, route, id}) => (
               <ScrollIntoView selector={id} key={page}>
                 <Button
