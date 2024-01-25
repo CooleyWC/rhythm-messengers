@@ -12,11 +12,12 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import {Link} from 'react-router-dom'
-const pagess = ['About', 'Photos', 'Testimonials', 'Contact'];
+import ScrollIntoView from 'react-scroll-into-view'
+
 const pages = [
   {
     page: 'About',
-    route: '/about'
+    id: '#about'
   },
   {
     page:'Photos',
@@ -28,7 +29,8 @@ const pages = [
   },
   {
     page: 'Contact',
-    route: '/contact'
+    id: '#contact'
+   
   }
 ]
 function NavBar(props) {
@@ -96,8 +98,11 @@ function NavBar(props) {
               }}
             >
               {pages.map(({page, route}) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem 
+                  key={page} 
+                  onClick={handleCloseNavMenu}
+                  component={Link}>
+                  {page}
                 </MenuItem>
               ))}
             </Menu>
@@ -122,16 +127,17 @@ function NavBar(props) {
             Rhythm Messengers
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map(({page, route}) => (
-              <Button
-                key={page}
-                component={Link}
-                to={route}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+            {pages.map(({page, route, id}) => (
+              <ScrollIntoView selector={id} key={page}>
+                <Button
+                  component={Link}
+                  to={route ? route:null}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page}
+                </Button>
+              </ScrollIntoView>
             ))}
           </Box>
         </Toolbar>
