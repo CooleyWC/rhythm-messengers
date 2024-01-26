@@ -3,7 +3,7 @@ import Card from './Card';
 
 function Contact(props) {
     return (
-        <div>
+        <div id="contact">
             <h1>Contact</h1>
             <h3>Representation</h3>
             <Card
