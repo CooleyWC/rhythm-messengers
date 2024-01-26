@@ -1,18 +1,6 @@
-/* 
-.title-container {
-    width: 100%;
-
-}
-
-.bg-image {
-
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-} */
 
 body {
-    margin: 0px
+    margin: 0;
+    padding: 0;
 }
 

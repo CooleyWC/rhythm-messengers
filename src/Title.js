@@ -1,44 +1,53 @@
 import React from 'react';
-import {Grid} from '@mui/material';
-import {styled} from '@mui/system';
-
-const TitleContainer = styled(Grid)({
-    width: '100%',
-    height: '60vh',
-    '@media (max-width:600px':{
-        height: '40vh',
-    }
-})
-
-const BackgroundImage = styled('div')({
-    backgroundRepeat: 'no-repeat',
-    height: '100%',
-    width: '100%',
-    backgroundSize: 'cover',
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'black'
-})
-
-const Image = styled('img')({
-    width: '50%',
-    height: 'auto',
-    objectFit: 'cover',
-})
+import {Grid, CardMedia, Typography} from '@mui/material';
 
 
 function Title(props) {
 
+    const titleText = 'Rhythm Messengers'
+
+    const gridContainerStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        backgroundColor: 'black',
+        overflow: 'hidden',
+        margin: 0,
+        padding: 0,
+
+    }
+
+    const imageStyle = {
+        maxWidth: '75%',
+        maxHeight: '75%',
+        marginTop: '20px',
+        objectFit: 'contain'
+    }
+
+    const typeStyle = {
+        color: 'white',
+        textAlign: 'center',
+        '@media (max-width:600px)': {
+            textAlign: 'center',
+        }
+
+    }
+
     return (
-        <TitleContainer container>
-            <Grid item xs={12}>
-                <BackgroundImage>
-                    <Image src='media/RMELogo300-2-ver-7.jpeg' alt='drum-logo' />
-                </BackgroundImage>
-            </Grid>
-        </TitleContainer>
+        <Grid container style={gridContainerStyle}>
+            <CardMedia
+                component='img'
+                src='media/RMELogo300-2-no-background.png' 
+                alt='drum-logo' 
+                style={imageStyle}
+                >
+            </CardMedia>
+            <Typography variant='h3' style={typeStyle}>
+                {titleText}
+            </Typography> 
+        </Grid>
     );
 }
 
