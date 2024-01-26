@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card'
 function About(props) {
     return (
-        <div>
+        <div id='about'>
             <h1>About</h1>
               <div>
                 <div>

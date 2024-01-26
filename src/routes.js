@@ -7,12 +7,11 @@ const routes = [
         path: '/',
         element: <App />,
         errorElement: <ErrorPage />,
-        children: [
-            {
-                path: '/testemonials',
-                element: <Testemonials />
-            }
-        ]
+    },
+    {
+        path: '/testemonials',
+        element: <Testemonials />,
+        errorElement: <ErrorPage />
     }
 ]
 
