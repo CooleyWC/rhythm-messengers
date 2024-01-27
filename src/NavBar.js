@@ -46,7 +46,7 @@ function NavBar(props) {
     return (
     <AppBar 
       style={{position: 'fixed'}}
-      sx={{backgroundColor: '#FFC080'}}>
+      sx={{backgroundColor: '#f77a00'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters >
           {/* This Typography element renders on desktop screen size */}
