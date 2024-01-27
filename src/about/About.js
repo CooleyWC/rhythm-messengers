@@ -9,11 +9,11 @@ import Card from './Card'
 
 
 
-function About(props) {
+const About=(props) =>{
 
   return (
     <div style={{ backgroundColor: 'black' }}>
-      <Container id='about' sx={{ bgcolor: 'black', color: 'white' }}>
+      <Container sx={{ bgcolor: 'black', color: 'white' }}>
         <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#f77a00' }}>
           About
         </Typography>
@@ -43,11 +43,11 @@ function About(props) {
           <Typography variant="body1" paragraph align='center'>
             Call today and give your guests - a BOOM!
           </Typography>
-          <Box textAlign='center' >
+          {/* <Box textAlign='center' >
             <Button variant="contained" sx={{ backgroundColor: '#f77a00', ':hover': { backgroundColor: '#f77a00' } }} href='#' >
               Book Now
             </Button>
-          </Box>
+          </Box> */}
         </Grid>
 
 
