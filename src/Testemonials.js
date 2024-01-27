@@ -1,5 +1,4 @@
 import React from 'react';
-import {Grid, Card, CardContent, Typography} from '@mui/material'
 import NavBar from './NavBar';
 
 function Testemonials(props) {

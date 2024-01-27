@@ -7,12 +7,20 @@ const routes = [
         path: '/',
         element: <App />,
         errorElement: <ErrorPage />,
+        children:[
+          
+        ]
+
     },
     {
-        path: '/testemonials',
-        element: <Testemonials />,
-        errorElement: <ErrorPage />
+      path:'/:id',
+      element:<App />
+    },
+    {
+        path: '/Testemonials',
+        element: <Testemonials />
     }
+
 ]
 
 export default routes;

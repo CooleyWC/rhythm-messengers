@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
-function Contact(props) {
+const Contact=(props) =>{
     return (
-        <div id="contact">
+        <div>
             <h1>Contact</h1>
             <h3>Representation</h3>
             <Card

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,29 +11,29 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import {Link} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import ScrollIntoView from 'react-scroll-into-view'
-
 const pages = [
   {
     page: 'About',
-    id: '#about'
+    route: '/About'
   },
   {
-    page:'Photos',
+    page: 'Photos',
     route: 'https://www.instagram.com/rhythmmessengers/'
   },
   {
     page: 'Testemonials',
-    route: '/testemonials'
+    route: '/Testemonials'
   },
   {
     page: 'Contact',
-    id: '#contact'
-   
+    route: '/Contact'
+
   }
 ]
-function NavBar(props) {
+
+function NavBar({ handleClick }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -43,18 +43,19 @@ function NavBar(props) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-    return (
-    <AppBar 
-      style={{position: 'fixed'}}
-      sx={{backgroundColor: '#FFC080'}}>
+
+  return (
+    <AppBar
+      style={{ position: 'fixed' }}
+      sx={{ backgroundColor: '#f77a00' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters >
           {/* This Typography element renders on desktop screen size */}
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={Link}
+            to='/'
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -65,7 +66,7 @@ function NavBar(props) {
               textDecoration: 'none',
             }}
           >
-            
+
             Rhythm Messengers
           </Typography>
 
@@ -99,17 +100,19 @@ function NavBar(props) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map(({page, route, id}) => (
-                <ScrollIntoView selector={id} key={page}>
-                    <MenuItem 
-                      key={page} 
-                      onClick={handleCloseNavMenu}
-                      component={Link}
-                      to={route ? route:null}
-                      >
-                      {page}
-                    </MenuItem>
-                  </ScrollIntoView>
+              {pages.map(({ page, route }) => (
+                <MenuItem
+                  key={page}
+                  component={NavLink}
+                  to={route}
+                  onClick={() => {
+                    if (handleClick) {
+                      handleClick(page)
+                    }
+                  }}
+                >
+                  {page}
+                </MenuItem>
               ))}
             </Menu>
           </Box>
@@ -130,29 +133,31 @@ function NavBar(props) {
               textDecoration: 'none',
             }}
           >
-            
+
             Rhythm Messengers
           </Typography>
 
           {/**This Box is for desktop screen size */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:'space-evenly' }}>
-            {pages.map(({page, route, id}) => (
-              <ScrollIntoView selector={id} key={page}>
-                <Button
-                  component={Link}
-                  to={route ? route:null}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page}
-                </Button>
-              </ScrollIntoView>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'space-evenly' }}>
+            {pages.map(({ page, route }) => (
+              <Button
+                component={NavLink}
+                to={route}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                onClick={() => {
+                  if (handleClick) {
+                    handleClick(page)
+                  }
+                }}
+              >
+                {page}
+              </Button>
             ))}
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-    );
+  );
 }
 
 export default NavBar;
