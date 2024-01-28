@@ -1,6 +1,6 @@
 import App from './App';
 import ErrorPage from './ErrorPage';
-import Testimonials from './Testimonials'
+import Testimonials from './testimonials/Testimonials'
 
 const routes = [
     {
