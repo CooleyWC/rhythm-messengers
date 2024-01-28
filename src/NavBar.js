@@ -23,8 +23,8 @@ const pages = [
     route: 'https://www.instagram.com/rhythmmessengers/'
   },
   {
-    page: 'Testemonials',
-    route: '/Testemonials'
+    page: 'Testimonials',
+    route: '/Testimonials'
   },
   {
     page: 'Contact',
