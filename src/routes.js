@@ -1,6 +1,6 @@
 import App from './App';
 import ErrorPage from './ErrorPage';
-import Testemonials from './Testemonials'
+import Testimonials from './Testimonials'
 
 const routes = [
     {
@@ -17,8 +17,8 @@ const routes = [
       element:<App />
     },
     {
-        path: '/Testemonials',
-        element: <Testemonials />
+        path: '/Testimonials',
+        element: <Testimonials />
     }
 
 ]

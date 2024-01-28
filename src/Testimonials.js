@@ -1,7 +1,8 @@
 import React from 'react';
 import NavBar from './NavBar';
+import {Grid, Card, CardContent, Typography} from '@mui/material'
 
-function Testemonials(props) {
+function Testimonials(props) {
 
     const cardStyle = {
         backgroundColor: 'black'
@@ -28,4 +29,4 @@ function Testemonials(props) {
     );
 }
 
-export default Testemonials;
+export default Testimonials;
