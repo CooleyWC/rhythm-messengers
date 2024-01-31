@@ -3,7 +3,10 @@ import Grid from '@mui/material/Grid'
 import { Box, CardMedia, Typography } from '@mui/material';
 import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import SpeakerIcon from '@mui/icons-material/Speaker';
-
+import BusinessIcon from '@mui/icons-material/Business';
+import FestivalIcon from '@mui/icons-material/Festival';
+import WorkIcon from '@mui/icons-material/Work';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 const About=(props) =>{
 
@@ -17,11 +20,6 @@ const About=(props) =>{
     paddingTop: '20px',
     paddingBottom: '40px',
     backgroundColor: 'black',
-   
-  }
-
-  const energyBoxStyle = {
-    // paddingTop: '100px'
   }
 
   return (
@@ -39,7 +37,7 @@ const About=(props) =>{
           </Grid>
         </Grid>
       </Box>
-      <Box style={energyBoxStyle}>
+      <Box>
         <Grid container spacing={2}>
           <Grid item xs={8}>
             <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#007FFF', paddingTop: '100px', paddingBottom: '30px' }}>
@@ -84,43 +82,51 @@ const About=(props) =>{
           </Grid>
         </Grid>
       </Box>
-
+      <Box>
+        <Grid container style={{backgroundColor: '#f5f5f5', height: '400px', paddingTop: '50px'}}>
+          <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
+            <BusinessIcon style={{fontSize: '50px'}}/>
+            <Typography style={{fontSize: '30px'}}>
+              Trade Shows
+            </Typography>
+            <Typography variant='body1' style={{fontSize: '18px', fontWeight: '300', padding: '30px'}}>
+              Stop traffic at your booth with an attraction they won't forget.
+            </Typography>
+          </Grid>
+       
+          <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
+            <FestivalIcon style={{fontSize: '50px'}}/>
+            <Typography style={{fontSize: '30px'}}>
+              Festivals
+            </Typography>
+            <Typography variant='body1' style={{fontSize: '18px', fontWeight: '300', padding: '30px'}}>
+              Main stage or impromptu, We light the fuse to festival fun.
+            </Typography>
+          </Grid>
+   
+          <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
+            <WorkIcon style={{fontSize: '50px'}}/>
+            <Typography style={{fontSize: '30px'}}>
+              Corporate Events
+            </Typography>
+            <Typography variant='body1' style={{fontSize: '18px', fontWeight: '300', padding: '30px'}}>
+              Give your company an event to remember with our rhythmic beats.
+            </Typography>
+          </Grid>
+  
+          <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
+            <GroupsIcon style={{fontSize: '50px'}}/>
+            <Typography style={{fontSize: '30px'}}>
+              Sessions
+            </Typography>
+            <Typography variant='body1' style={{fontSize: '18px', fontWeight: '300', padding: '30px'}}>
+              Kick off the meeting with an electrifying and high energy atmosphere.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Box>
     </div>
   );
 }
 
 export default About;
-
-
-{/* <Container sx={{ bgcolor: 'black', color: 'white' }}>
-<Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#f77a00' }}>
-  About
-</Typography>
-<Grid   >
-  <Typography variant="body1" paragraph align='center' >
-    The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers to elevate the energy of your next event!
-  </Typography>
-  <Typography variant="body1" paragraph align='center' >
-    We are a collection of performers drawing from Chicago’s best drumming productions. We’ll tailor-make our show to best fit your event needs and venue.
-  </Typography>
-</Grid>
-<Grid >
-  <Typography variant="h3" align="center" gutterBottom sx={{ fontSize: '48px', color: '#f77a00' }}>
-    Energy
-  </Typography>
-  <Typography variant="body1" paragraph align='center' >
-    Ignite your event with our choreographed, high-energy drumming that will get your guests jumping out of their chairs!
-  </Typography>
-</Grid>
-<Grid >
-  <Typography variant="h3" align="center" gutterBottom sx={{ fontSize: '48px', color: '#f77a00' }}>
-    'BOOM' Your Audience
-  </Typography>
-  <Typography variant="body1" paragraph align='center'>
-    Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp, and dance your event away.
-  </Typography>
-  <Typography variant="body1" paragraph align='center'>
-    Call today and give your guests - a BOOM!
-  </Typography>
- 
-</Grid> */}
