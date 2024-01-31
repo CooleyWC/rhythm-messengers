@@ -27,7 +27,7 @@ const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    //handle user's email and message
+    //Send email and message to info@liveartinternational.com
     console.log('email', email)
     console.log('message', message)
   }
@@ -42,7 +42,12 @@ const Contact = (props) => {
         <Grid>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <Input placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Input
+              placeholder="Enter Your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth={false}
+            />
           </FormControl>
         </Grid>
         <Grid>
@@ -126,42 +131,6 @@ const Contact = (props) => {
           </FormControl>
         </Grid>
       </form>
-
-      {/* <form onSubmit={handleSubmit}>
-        <label>
-          Your Email
-          <input
-            type='text'
-            value={email}
-            placeholder='Your Email'
-            onClick={(e) => setEmail(e.target.value)} />
-        </label>
-        <label>
-          Your Message
-          <input
-            type='textarea'
-            value={message}
-            placeholder='Your Message'
-            onClick={(e) => setMessage(e.target.value)} />
-        </label>
-        <button>Sumbit Message</button>
-      </form> */}
-      {/* <h3>Representation</h3>
-            <Card
-            name="THOMAS BENKO" 
-            title="Band Leader" 
-            email="" 
-            phoneNumber=" 1-630-415-9521"/>
-            <Card 
-            name="LIVE ART INTERNATIONAL" 
-            title="Agent - Dayna Malow" 
-            email="info@liveartinternational.com" 
-            phoneNumber="1-800-985-9330"/>
-            <Card 
-            name="SF Agent" 
-            title="Pinnacle - Nathan Kelly"
-            email="" 
-            phoneNumber="1-800-769-3322"/> */}
     </Container>
   );
 }
