@@ -7,11 +7,13 @@ import BusinessIcon from '@mui/icons-material/Business';
 import FestivalIcon from '@mui/icons-material/Festival';
 import WorkIcon from '@mui/icons-material/Work';
 import GroupsIcon from '@mui/icons-material/Groups';
+import Divider from '@mui/material/Divider';
+
 
 const About=(props) =>{
 
   const boxStyle = {
-    backgroundColor: 'white'
+    backgroundColor: '#141A1F'
   }
 
   const aboutTitleStyle = {
@@ -19,12 +21,13 @@ const About=(props) =>{
     marginBottom: '40px',
     paddingTop: '20px',
     paddingBottom: '40px',
-    backgroundColor: 'black',
+    backgroundColor: '#141A1F',
   }
 
   return (
-    <div style={{ backgroundColor: 'black' }}>
+    <div style={{ backgroundColor: '#141A1F' }}>
       <Box style={boxStyle}>
+      <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
         <Grid container>
           <Grid item xs={12} style={aboutTitleStyle}>
             <Typography variant="h2" gutterBottom sx={{ fontSize: '48px', color: '#f77a00', paddingBottom: '30px', textAlign: "center" }}>
@@ -37,6 +40,7 @@ const About=(props) =>{
           </Grid>
         </Grid>
       </Box>
+      <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
       <Box>
         <Grid container spacing={2}>
           <Grid item xs={8}>
@@ -45,7 +49,7 @@ const About=(props) =>{
             </Typography>
             <BatteryChargingFullIcon style={{color: '#007FFF', fontSize:'60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
             <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '60px', paddingRight: '60px', paddingBottom: '30px'}}>
-              The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers to elevate the energy of your next event!
+              Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
           </Grid>
           <Grid item xs={4} style={{display: 'flex', justifyContent:'flex-end'}}>
@@ -53,20 +57,22 @@ const About=(props) =>{
               component='img'
               src='/media/RME-energy-photo.png'
               alt='drum-energy'
-              style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', maxHeight: '680px'}}
+              style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', maxHeight: '680px', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
         </Grid>
       </Box>
-      <Box style={{paddingTop: '60px', backgroundColor: 'white'}}>
-        <Grid container spacing={2} style={{backgroundColor: 'black'}}>
-          <Grid item xs={4} style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'}}>
+      <Divider sx={{height: 6, backgroundColor: '#CCCCCC'}}/>
+      <Box style={{paddingTop: '10px', backgroundColor: '#141A1F'}}>
+        <Grid container spacing={2} style={{backgroundColor: '#141A1F'}}>
+          <Grid item xs={4} style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', height: '100%', margin: 0, padding: 0}}>
+{/* This image gets pushed to the top left when viewed on small devices - will need to fix */}
             <CardMedia
               component='img'
               src='/media/RME-bassdrum.png'
               alt='bass-drum'
-              style={{width:'100%', height: '100%', objectFit: 'cover', maxHeight: '680px'}}
+              style={{width:'100%', height: '100%', objectFit: 'cover', maxHeight: '680px', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
