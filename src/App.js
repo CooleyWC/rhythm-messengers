@@ -38,7 +38,11 @@ function App(props) {
         top: '-100px'
       }} />
       <About />
-      <div ref={contactRef}>
+      <div ref={contactRef} style={{
+        // position: 'relative',
+        // top: '-100px',
+        backgroundColor: 'black'
+      }} >
         <Contact />
       </div>
       <Footer />
