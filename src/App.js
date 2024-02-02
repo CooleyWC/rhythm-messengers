@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import Video from './Video';
 import About from './about/About';
 import Contact from './contact/Contact';
-import Footer from './Footer';
+import Footer from './footer/Footer';
 import React from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 
