@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid'
-import { Box, CardMedia, Typography } from '@mui/material';
+import { Box, CardContent, CardMedia, Typography, Container } from '@mui/material';
 import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import SpeakerIcon from '@mui/icons-material/Speaker';
 import BusinessIcon from '@mui/icons-material/Business';
@@ -33,7 +33,7 @@ const About=(props) =>{
             <Typography variant="h2" gutterBottom sx={{ fontSize: '48px', color: '#f77a00', paddingBottom: '30px', textAlign: "center" }}>
               About
             </Typography>
-            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '100px', marginRight: '100px'}}>
+            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px'}}>
               The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers to elevate the energy of your next event!<br/><br/>
               We are a collection of performers drawing from Chicago’s best drumming productions. We’ll tailor-make our show to best fit your event needs and venue.
             </Typography>
@@ -48,7 +48,7 @@ const About=(props) =>{
               Energy
             </Typography>
             <BatteryChargingFullIcon style={{color: '#007FFF', fontSize:'60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '60px', paddingRight: '60px', paddingBottom: '30px'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
           </Grid>
@@ -77,11 +77,11 @@ const About=(props) =>{
             </CardMedia>
           </Grid>
           <Grid item xs={8}>
-            <Typography variant='h2' align='center' gutterBottom style={{color: '#FF3300', paddingTop: '100px', paddingBottom: '30px'}}>
-              BOOM
+            <Typography variant='h2' align='center' gutterBottom style={{color: '#FF3300', fontSize: '48px', paddingTop: '100px', paddingBottom: '30px', paddingRight: '20px', paddingLeft: '20px'}}>
+              'BOOM' Your Audience
             </Typography>
             <SpeakerIcon style={{color: '#FF3300', fontSize: '60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '60px', paddingRight: '60px', paddingBottom: '30px'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px'}}>
               Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away.<br/><br/>
               Call today and give your guests - a BOOM!
             </Typography>
@@ -131,6 +131,172 @@ const About=(props) =>{
           </Grid>
         </Grid>
       </Box>
+      <Container>
+        <Grid container spacing={1} style={{display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingBottom: '20px'}}>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/elmilagro.png'
+               alt='milagro'
+               style={{padding: '0', margin: '0', maxHeight: '75px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/jra.png'
+               alt='jra'
+               style={{padding: '0', margin: '0', maxHeight: '75px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/century21.png'
+               alt='c21'
+               style={{padding: '0', margin: '0', maxHeight: '75px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/decision1.png'
+               alt='decision1'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/2friends.png'
+               alt='2friends'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/lolla.png'
+               alt='lolla'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/att.png'
+               alt='att'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/wintrust.png'
+               alt='wintrust'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/hand2mind.png'
+               alt='hand2mind'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/joeslive.png'
+               alt='joeslive'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/flyover.png'
+               alt='flyover'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/cabinet.png'
+               alt='cabinet'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/mri.png'
+               alt='mri'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/lifetime.png'
+               alt='lifetime'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/museum.png'
+               alt='museum'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/nurse.png'
+               alt='nurse'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/marathon.png'
+               alt='marathon'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+          <Grid item>
+            <CardContent
+               component='img'
+               src='/media/client-logos/wbc.png'
+               alt='wbc'
+               style={{padding: '0', margin: '0', maxHeight: '60px', maxWidth: '100%'}}
+            >
+            </CardContent>
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }
