@@ -88,8 +88,8 @@ const About=(props) =>{
           </Grid>
         </Grid>
       </Box>
-      <Box>
-        <Grid container style={{backgroundColor: '#f5f5f5', height: '400px', paddingTop: '50px'}}>
+     
+        <Grid container style={{backgroundColor: '#f5f5f5', paddingTop: '50px'}}>
           <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
             <BusinessIcon style={{fontSize: '50px'}}/>
             <Typography style={{fontSize: '30px'}}>
@@ -130,7 +130,7 @@ const About=(props) =>{
             </Typography>
           </Grid>
         </Grid>
-      </Box>
+   
       <Container>
         <Grid container spacing={1} style={{display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingBottom: '20px'}}>
           <Grid item>

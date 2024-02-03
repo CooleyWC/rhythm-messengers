@@ -33,7 +33,7 @@ const Contact = (props) => {
     console.log('message', message)
   }
   return (
-    <Container sx={{ bgcolor: 'black', color: 'white', paddingBottom: '30px' }} >
+    <Container sx={{ color: 'white', paddingBottom: '30px' }} >
       <form onSubmit={handleSubmit}>
         <Grid>
           <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#f77a00' }}>

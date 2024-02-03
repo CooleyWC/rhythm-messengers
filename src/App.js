@@ -41,7 +41,7 @@ function App(props) {
       <div ref={contactRef} style={{
         // position: 'relative',
         // top: '-100px',
-        backgroundColor: 'black'
+        backgroundColor: '#141A1F'
       }} >
         <Contact />
       </div>
