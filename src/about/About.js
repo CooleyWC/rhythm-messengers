@@ -66,13 +66,12 @@ const About=(props) =>{
       <Divider sx={{height: 6, backgroundColor: '#CCCCCC'}}/>
       <Box style={{paddingTop: '10px', backgroundColor: '#141A1F'}}>
         <Grid container spacing={2} style={{backgroundColor: '#141A1F'}}>
-          <Grid item xs={4} style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', height: '100%', margin: 0, padding: 0}}>
-{/* This image gets pushed to the top left when viewed on small devices - will need to fix */}
+          <Grid item xs={4} style={{display: 'flex', justifyContent:'flex-end', paddingTop:'0'}}>
             <CardMedia
               component='img'
               src='/media/RME-bassdrum.png'
               alt='bass-drum'
-              style={{width:'100%', height: '100%', objectFit: 'cover', maxHeight: '680px', margin: 0, padding: 0}}
+              style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
