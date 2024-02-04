@@ -1,12 +1,14 @@
+import { Typography } from '@mui/material'
 import React from 'react'
+
 
 const Card = ({name, title, email, phoneNumber}) => {
   return (
     <div>
-      <p>{name}</p>
-      <p>{title}</p>
-      {email.length > 0 && <p>{email}</p>}
-      <p>Phone: {phoneNumber}</p>
+      <Typography style={{fontSize: '22px'}}>{name}</Typography>
+      <Typography>{title}</Typography>
+      {email.length > 0 && <Typography>{email}</Typography>}
+      <Typography>Phone: {phoneNumber}</Typography>
     </div>
   )
 }

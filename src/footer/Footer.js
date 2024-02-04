@@ -3,7 +3,9 @@ import { FaInstagram } from "react-icons/fa";
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
+
 import Card from './Card'
+import { Typography } from '@mui/material';
 function Footer(props) {
     return (
           <Box style={{backgroundColor:'#f5f5f5' }}>
@@ -30,7 +32,7 @@ function Footer(props) {
                   phoneNumber="1-800-769-3322" />
               </Grid>
             </Grid>
-            <p style={{marginBottom:'0'}}>© 2020 Rhythm Messengers. Site by www.PromoBooth.com</p>
+            <Typography style={{fontSize: '12px', textAlign: 'center', marginBottom:'0', marginTop: '20px'}}>© 2024 Rhythm Messengers.</Typography>
           </Box>
     );
 }
