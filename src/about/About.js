@@ -69,7 +69,7 @@ const About=(props) =>{
           <Grid item xs={4} style={{display: 'flex', justifyContent:'flex-end', paddingTop:'0'}}>
             <CardMedia
               component='img'
-              src='/media/RME-bassdrum.png'
+              src='/media/RME-bassdrum-flip.png'
               alt='bass-drum'
               style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', margin: 0, padding: 0}}
             >
@@ -98,7 +98,7 @@ const About=(props) =>{
               Stop traffic at your booth with an attraction they won't forget.
             </Typography>
           </Grid>
-       
+
           <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
             <FestivalIcon style={{fontSize: '50px'}}/>
             <Typography style={{fontSize: '30px'}}>
@@ -295,7 +295,9 @@ const About=(props) =>{
             </CardContent>
           </Grid>
         </Grid>
+        <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
       </Container>
+      
     </div>
   );
 }
