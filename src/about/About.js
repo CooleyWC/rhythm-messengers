@@ -44,11 +44,11 @@ const About=(props) =>{
       <Box>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={8} lg={8}>
-            <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#007FFF', paddingTop: '100px', paddingBottom: '30px' }}>
+            <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#007FFF', paddingTop: '70px', paddingBottom: '30px' }}>
               Energy
             </Typography>
             <BatteryChargingFullIcon style={{color: '#007FFF', fontSize:'60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px', textAlign: 'center'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '70px', paddingRight: '70px', paddingBottom: '30px', textAlign: 'center'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
           </Grid>
@@ -76,11 +76,11 @@ const About=(props) =>{
             </CardMedia>
           </Grid>
           <Grid item xs={12} sm={12} md={8} lg={8}>
-            <Typography variant='h2' align='center' gutterBottom style={{color: '#FF3300', fontSize: '48px', paddingTop: '100px', paddingBottom: '30px', paddingRight: '20px', paddingLeft: '20px'}}>
+            <Typography variant='h2' align='center' gutterBottom style={{color: '#FF3300', fontSize: '48px', paddingTop: '70px', paddingBottom: '30px', paddingRight: '20px', paddingLeft: '20px'}}>
               Custom Performances
             </Typography>
             <SpeakerIcon style={{color: '#FF3300', fontSize: '60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px', textAlign: 'center'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '70px', paddingRight: '70px', paddingBottom: '30px', textAlign: 'center'}}>
               Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away!
             </Typography>
           </Grid>
