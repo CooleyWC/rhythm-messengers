@@ -8,7 +8,7 @@ const Card = ({name, title, email, phoneNumber}) => {
       <Typography style={{fontSize: '22px'}}>{name}</Typography>
       <Typography>{title}</Typography>
       {email.length > 0 && <Typography>{email}</Typography>}
-      <Typography>Phone: {phoneNumber}</Typography>
+      {phoneNumber.length > 0 && <Typography>{phoneNumber}</Typography>}
     </div>
   )
 }
