@@ -33,7 +33,7 @@ const About=(props) =>{
             <Typography variant="h2" gutterBottom sx={{ fontSize: '48px', color: '#f77a00', paddingBottom: '30px', textAlign: "center" }}>
               About
             </Typography>
-            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px'}}>
+            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px', textAlign:'center'}}>
               The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers to elevate the energy of your next event!<br/><br/>
               We are a collection of performers drawing from Chicago’s best drumming productions. We’ll tailor-make our show to best fit your event needs and venue.
             </Typography>
@@ -43,21 +43,21 @@ const About=(props) =>{
       <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
       <Box>
         <Grid container spacing={2}>
-          <Grid item xs={8}>
+          <Grid item xs={12} sm={12} md={8} lg={8}>
             <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#007FFF', paddingTop: '100px', paddingBottom: '30px' }}>
               Energy
             </Typography>
             <BatteryChargingFullIcon style={{color: '#007FFF', fontSize:'60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px', textAlign: 'center'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
           </Grid>
-          <Grid item xs={4} style={{display: 'flex', justifyContent:'flex-end'}}>
+          <Grid item xs={12} sm={12} md={4} lg={4} style={{display: 'flex', justifyContent:'flex-end'}}>
             <CardMedia
               component='img'
-              src='/media/RME-energy-photo.png'
+              src='/media/RME-energy2.jpg'
               alt='drum-energy'
-              style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', maxHeight: '680px', margin: 0, padding: 0}}
+              style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
@@ -66,23 +66,22 @@ const About=(props) =>{
       <Divider sx={{height: 6, backgroundColor: '#CCCCCC'}}/>
       <Box style={{paddingTop: '10px', backgroundColor: '#141A1F'}}>
         <Grid container spacing={2} style={{backgroundColor: '#141A1F'}}>
-          <Grid item xs={4} style={{display: 'flex', justifyContent:'flex-end', paddingTop:'0'}}>
+          <Grid item xs={12} sm={12} md={4} lg={4} style={{display: 'flex', justifyContent:'flex-end', paddingTop:'0'}}>
             <CardMedia
               component='img'
-              src='/media/RME-bassdrum-flip.png'
+              src='/media/RME-custom.jpg'
               alt='bass-drum'
               style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12} sm={12} md={8} lg={8}>
             <Typography variant='h2' align='center' gutterBottom style={{color: '#FF3300', fontSize: '48px', paddingTop: '100px', paddingBottom: '30px', paddingRight: '20px', paddingLeft: '20px'}}>
-              'BOOM' Your Audience
+              Custom Performances
             </Typography>
             <SpeakerIcon style={{color: '#FF3300', fontSize: '60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px'}}>
-              Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away.<br/><br/>
-              Call today and give your guests - a BOOM!
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px', textAlign: 'center'}}>
+              Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away!
             </Typography>
           </Grid>
         </Grid>
