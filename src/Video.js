@@ -9,7 +9,6 @@ function Video(props) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingBottom: '30px'
     }
 
     return (
