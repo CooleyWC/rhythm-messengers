@@ -6,10 +6,10 @@ import About from './about/About';
 import Contact from './contact/Contact';
 import Footer from './footer/Footer';
 import React from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
-function App(props) {
+function App() {
   const aboutRef = React.useRef(null)
   const contactRef = React.useRef(null)
 
