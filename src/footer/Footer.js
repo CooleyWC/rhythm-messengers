@@ -14,8 +14,8 @@ function Footer(props) {
                 <Card
                   name="THOMAS BENKO"
                   title="Band Leader"
-                  email=""
-                  phoneNumber=" 1-630-415-9521" />
+                  email="tabdrums@gmail.com"
+                  phoneNumber="" />
               </Grid>
               <Grid item xs={12} sm={6} md={3} textAlign='center'>
                 <Card
@@ -23,13 +23,6 @@ function Footer(props) {
                   title="Agent - Dayna Malow"
                   email="info@liveartinternational.com"
                   phoneNumber="1-800-985-9330" />
-              </Grid>
-              <Grid item xs={12} sm={6} md={3} textAlign='center'>
-                <Card
-                  name="SF Agent"
-                  title="Pinnacle - Nathan Kelly"
-                  email=""
-                  phoneNumber="1-800-769-3322" />
               </Grid>
             </Grid>
             <Typography style={{fontSize: '12px', textAlign: 'center', marginBottom:'0', marginTop: '20px'}}>© 2024 Rhythm Messengers.</Typography>
