@@ -4,9 +4,7 @@ import { Grid, Box, Typography } from '@mui/material'
 import TCard from './TCard';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
-function Testimonials(props) {
-
-
+function Testimonials() {
     const containerStyle = {
         paddingTop: '50px',
         backgroundColor: 'black',
