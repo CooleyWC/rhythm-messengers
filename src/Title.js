@@ -13,8 +13,8 @@ function Title(props) {
     }
 
     const imageStyle = {
-        maxWidth: '75%',
-        maxHeight: '80%',
+        maxWidth: '55%',
+        maxHeight: '55%',
         marginTop: '25px',
         objectFit: 'cover'
     }
