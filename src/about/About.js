@@ -33,7 +33,7 @@ const About=(props) =>{
             <Typography variant="h2" gutterBottom sx={{ fontSize: '48px', color: '#f77a00', paddingBottom: '30px', textAlign: "center" }}>
               About
             </Typography>
-            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px'}}>
+            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px', textAlign:'center'}}>
               The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers to elevate the energy of your next event!<br/><br/>
               We are a collection of performers drawing from Chicago’s best drumming productions. We’ll tailor-make our show to best fit your event needs and venue.
             </Typography>
@@ -48,7 +48,7 @@ const About=(props) =>{
               Energy
             </Typography>
             <BatteryChargingFullIcon style={{color: '#007FFF', fontSize:'60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px', textAlign: 'center'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
           </Grid>
@@ -80,7 +80,7 @@ const About=(props) =>{
               Custom Performances
             </Typography>
             <SpeakerIcon style={{color: '#FF3300', fontSize: '60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px'}}>
+            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '50px', paddingRight: '50px', paddingBottom: '30px', textAlign: 'center'}}>
               Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away!
             </Typography>
           </Grid>
