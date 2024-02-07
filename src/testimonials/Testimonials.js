@@ -5,6 +5,11 @@ import TCard from './TCard';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 function Testimonials() {
+  
+  React.useEffect(()=>{
+    window.scrollTo({top: 1})
+  }, [])
+
     const containerStyle = {
         paddingTop: '50px',
         backgroundColor: 'black',
