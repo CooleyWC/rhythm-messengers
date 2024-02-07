@@ -39,8 +39,6 @@ function App() {
       }} />
       <About />
       <div ref={contactRef} style={{
-        // position: 'relative',
-        // top: '-100px',
         backgroundColor: '#141A1F'
       }} >
         <Contact />

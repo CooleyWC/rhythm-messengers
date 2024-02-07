@@ -1,12 +1,11 @@
 import React from 'react';
-import { FaInstagram } from "react-icons/fa";
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 
 import Card from './Card'
 import { Typography } from '@mui/material';
-function Footer(props) {
+function Footer() {
     return (
           <Box style={{backgroundColor:'#f5f5f5' }}>
             <Grid container spacing={2} sx={{justifyContent:'space-around'}}>

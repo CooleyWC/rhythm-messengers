@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
 import emailjs from '@emailjs/browser';
 
 
-const Contact = (props) => {
+const Contact = () => {
   const [email, setEmail] = React.useState('')
   const [message, setMessage] = React.useState('')
 
@@ -39,13 +39,14 @@ const Contact = (props) => {
       to_name: 'Rhythm Messengers',
       message: message,
     };
-    setEmail('')
-    setMessage('')
+    
     emailjs.send(serviceId, templateId, templateParams, {
         publicKey: publicKey,
       })
       .then((res)=>{
         console.log('success', res)
+        setEmail('')
+        setMessage('')
         
       })
       .catch((error)=>{

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid, CardMedia } from '@mui/material';
 
-
-function Video(props) {
+function Video() {
 
     const gridContainerStyle = {
         backgroundColor: 'black',
@@ -13,7 +12,6 @@ function Video(props) {
 
     return (
         <Grid container style={gridContainerStyle}>
-
                 <CardMedia 
                     component='video'
                     src='/media/RMEWebsiteTeaser.mp4'
@@ -23,7 +21,6 @@ function Video(props) {
                     title="RM-promo-video"
                 >
                 </CardMedia>
-
         </Grid>
     );
 }
