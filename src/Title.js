@@ -2,9 +2,7 @@ import React from 'react';
 import {Grid, CardMedia} from '@mui/material';
 import Stack from '@mui/material/Stack';
 
-
-
-function Title(props) {
+function Title() {
 
     const gridContainerStyle = {
         backgroundColor: 'black',

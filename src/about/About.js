@@ -9,8 +9,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import GroupsIcon from '@mui/icons-material/Groups';
 import Divider from '@mui/material/Divider';
 
-
-const About=(props) =>{
+const About=() =>{
 
   const boxStyle = {
     backgroundColor: '#141A1F'
@@ -296,7 +295,6 @@ const About=(props) =>{
         </Grid>
         <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
       </Container>
-      
     </div>
   );
 }
