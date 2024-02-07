@@ -16,8 +16,8 @@ import Container from '@mui/material/Container';
 import Input from '@mui/joy/Input';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Card from '../footer/Card'
 import emailjs from '@emailjs/browser';
+
 
 const Contact = (props) => {
   const [email, setEmail] = React.useState('')
@@ -29,20 +29,28 @@ const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-// new code
+
     const serviceId='service_g3c0vfn';
     const templateId='template_raegahg';
-    const publicKey='airrzkTHnHtHmPrKl';
+    const publicKey=process.env.REACT_APP_PUBLIC_KEY;
 
     const templateParams = {
       from_email: email,
       to_name: 'Rhythm Messengers',
       message: message,
     };
-
-    //Send email and message to info@liveartinternational.com
-    console.log('email', email)
-    console.log('message', message)
+    setEmail('')
+    setMessage('')
+    emailjs.send(serviceId, templateId, templateParams, {
+        publicKey: publicKey,
+      })
+      .then((res)=>{
+        console.log('success', res)
+        
+      })
+      .catch((error)=>{
+        console.error('error', error)
+      });
   }
   return (
     <Container sx={{ color: 'white', paddingBottom: '46px', paddingTop: '46px' }} >
@@ -68,6 +76,7 @@ const Contact = (props) => {
             <FormLabel>Message</FormLabel>
             <Textarea
               onChange={(e) => setMessage(e.target.value)}
+              value={message}
               placeholder="Message"
               minRows={3}
               endDecorator={
@@ -144,7 +153,6 @@ const Contact = (props) => {
           </FormControl>
         </Grid>
       </form>
-
     </Container>
   );
 }
