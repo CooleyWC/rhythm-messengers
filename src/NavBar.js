@@ -138,6 +138,7 @@ function NavBar({ handleClick }) {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'space-evenly' }}>
             {pages.map(({ page, route }) => (
               <Button
+                key={page}
                 component={NavLink}
                 to={route}
                 sx={{ my: 2, color: 'white', display: 'block' }}
