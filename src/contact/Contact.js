@@ -17,6 +17,7 @@ import Input from '@mui/joy/Input';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Card from '../footer/Card'
+import emailjs from '@emailjs/browser';
 
 const Contact = (props) => {
   const [email, setEmail] = React.useState('')
@@ -28,6 +29,17 @@ const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+// new code
+    const serviceId='service_g3c0vfn';
+    const templateId='template_raegahg';
+    const publicKey='airrzkTHnHtHmPrKl';
+
+    const templateParams = {
+      from_email: email,
+      to_name: 'Rhythm Messengers',
+      message: message,
+    };
+
     //Send email and message to info@liveartinternational.com
     console.log('email', email)
     console.log('message', message)
