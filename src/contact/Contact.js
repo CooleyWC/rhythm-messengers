@@ -145,10 +145,7 @@ const Contact = () => {
               sx={{
                 minWidth: 300,
                 fontWeight,
-                fontStyle: italic ? 'italic' : 'initial',
-                '&:focus-within': {
-                  border: '2px solid #f77a00'
-                }
+                fontStyle: italic ? 'italic' : 'initial'
               }}
             />
           </FormControl>
