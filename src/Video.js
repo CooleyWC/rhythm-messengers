@@ -11,7 +11,7 @@ function Video() {
     }
 
     return (
-        <Grid container style={gridContainerStyle}>
+        <Grid container style={gridContainerStyle} >
                 <CardMedia 
                     component='video'
                     src='/media/RMEWebsiteTeaser.mp4'
@@ -19,8 +19,10 @@ function Video() {
                     loop
                     muted
                     title="RM-promo-video"
+                    playsInline
                 >
                 </CardMedia>
+              
         </Grid>
     );
 }
