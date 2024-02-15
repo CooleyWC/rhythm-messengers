@@ -128,6 +128,7 @@ function NavBar({ handleClick }) {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              overflow:'visible'
             }}
           >
 
