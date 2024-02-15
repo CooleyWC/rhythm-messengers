@@ -34,8 +34,13 @@ const Contact = () => {
 
     const serviceId='service_g3c0vfn';
     const templateId='template_raegahg';
-    const publicKey=process.env.REACT_APP_PUBLIC_KEY;
+
+    const publicKey='airrzkTHnHtHmPrKl';
+
+
+ 
   
+
     const templateParams = {
       from_email: email,
       to_name: 'Rhythm Messengers',

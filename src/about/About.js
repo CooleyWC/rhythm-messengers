@@ -33,7 +33,7 @@ const About=() =>{
               About
             </Typography>
             <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px', textAlign:'center'}}>
-              The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers to elevate the energy of your next event!<br/><br/>
+              The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers who are ready to elevate the energy of your next event!<br/><br/>
               We are a collection of performers drawing from Chicago’s best drumming productions. We’ll tailor-make our show to best fit your event needs and venue.
             </Typography>
           </Grid>
