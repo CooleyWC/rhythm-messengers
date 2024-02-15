@@ -22,24 +22,16 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const [email, setEmail] = React.useState('')
   const [message, setMessage] = React.useState('')
-
   const [italic, setItalic] = React.useState(false);
   const [fontWeight, setFontWeight] = React.useState('normal');
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const publicKey=process.env.REACT_APP_PUBLIC_KEY;
-  console.log(publicKey)
   
   const handleSubmit = (e) => {
     e.preventDefault()
 
     const serviceId='service_g3c0vfn';
     const templateId='template_raegahg';
-
     const publicKey='airrzkTHnHtHmPrKl';
-
-
- 
-  
 
     const templateParams = {
       from_email: email,
