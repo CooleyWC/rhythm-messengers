@@ -17,6 +17,8 @@ import Input from '@mui/joy/Input';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import emailjs from '@emailjs/browser';
+import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';
 
 
 const Contact = () => {
@@ -25,6 +27,7 @@ const Contact = () => {
   const [italic, setItalic] = React.useState(false);
   const [fontWeight, setFontWeight] = React.useState('normal');
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [isAlert, setIsAlert] = React.useState(null);
   
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -46,14 +49,17 @@ const Contact = () => {
         console.log('success', res)
         setEmail('')
         setMessage('')
-        
-      })
-      .catch((error)=>{
+        setIsAlert(true)
+      },
+      (error)=>{
         console.error('error', error)
+        setIsAlert(false)
       });
   }
   return (
     <Container sx={{ color: 'white', paddingBottom: '46px', paddingTop: '46px' }} >
+      {isAlert === true && <Alert icon={<CheckIcon fontSize="inherit" />} severity="success" sx={{marginBottom: '15px'}}>Your message was sent!</Alert>}
+      {isAlert === false && <Alert severity="error" sx={{marginBottom: '15px'}}>There was a problem sending your message. Please call us!</Alert>}
       <form onSubmit={handleSubmit}>
         <Grid>
           <Typography variant="h2" align="center" gutterBottom sx={{ fontSize: '48px', color: '#f77a00' }}>

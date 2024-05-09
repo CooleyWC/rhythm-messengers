@@ -20,7 +20,7 @@ function Footer() {
                 <Card
                   name="LIVE ART INTERNATIONAL"
                   title="Agent - Dayna Malow"
-                  email="info@liveartinternational.com"
+                  email="dayna@liveartinternational.com"
                   phoneNumber="1-800-985-9330" />
               </Grid>
             </Grid>
