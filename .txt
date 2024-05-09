@@ -1,0 +1,6 @@
+- commit changes to github
+
+"npm run build"
+"npm run deploy"
+
+- go to github pages, type rhythmmessengers.com in "customdomain" input
