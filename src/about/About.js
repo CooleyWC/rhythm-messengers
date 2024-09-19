@@ -47,9 +47,10 @@ const About=() =>{
               Energy
             </Typography>
             <BatteryChargingFullIcon style={{color: '#007FFF', fontSize:'60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '70px', paddingRight: '70px', paddingBottom: '30px', textAlign: 'center'}}>
+            <Typography variant='body1' paragraph sx={{color: 'white', fontSize: {xs:'1.2rem', sm: '1.3rem', md:'1.4rem', lg: '1.5rem', xl: '1.7rem'}, fontWeight: 'light', lineHeight: {xs: '1.4', sm: '1.3', md: '1.4'}, p: {xs: '0 2.7rem', sm: '1.5rem 5rem', md: '2rem 5.2rem 4rem 5.2rem', lg: '2.5rem 5.5rem 3rem 5.5rem', xl: '2.7rem 9rem'}, textAlign: 'center'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
+           
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} style={{display: 'flex', justifyContent:'flex-end'}}>
             <CardMedia
