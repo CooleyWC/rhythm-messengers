@@ -74,6 +74,7 @@ const Contact = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               fullWidth={false}
+              required
             />
           </FormControl>
         </Grid>
@@ -85,6 +86,7 @@ const Contact = () => {
               value={message}
               placeholder="Message"
               minRows={3}
+              required
               endDecorator={
                 <Box
                   sx={{
@@ -141,8 +143,9 @@ const Contact = () => {
                   <Button type='submit' sx={{
                     ml: 'auto',
                     backgroundColor: '#f77a00',
+                    transition: 'all 0.3s ease',
                     '&:hover': {
-                      backgroundColor: '#f77a00'
+                      backgroundColor: '#4a4a4a'
                     }
                   }}>Submit Message</Button>
                 </Box>

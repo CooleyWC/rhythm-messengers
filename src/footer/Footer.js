@@ -24,7 +24,7 @@ function Footer() {
                   phoneNumber="1-800-985-9330" />
               </Grid>
             </Grid>
-            <Typography style={{fontSize: '12px', textAlign: 'center', marginBottom:'0', marginTop: '20px'}}>© 2024 Rhythm Messengers.</Typography>
+            <Typography style={{fontSize: '12px', textAlign: 'center', marginBottom:'0', marginTop: '20px'}}>© 2024 Rhythm Messengers. Designed by BlueWave Codeworks</Typography>
           </Box>
     );
 }
