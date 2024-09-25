@@ -29,17 +29,17 @@ const About=() =>{
       <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
         <Grid container>
           <Grid item xs={12} style={aboutTitleStyle}>
-            <Typography variant="h2" gutterBottom sx={{ fontSize: '48px', color: '#f77a00', paddingBottom: '30px', textAlign: "center" }}>
+            <Typography variant="h2" gutterBottom sx={{ fontSize: {xs: '3.5rem', xl: '4.5rem'}, color: '#f77a00', paddingBottom: '30px', textAlign: "center" }}>
               About
             </Typography>
-            <Typography variant='body1'  style={{color: 'white', fontSize: '22px', fontWeight: '300', marginLeft: '75px', marginRight: '75px', textAlign:'center'}}>
+            <Typography variant='body1' sx={{color: 'white', fontSize: {xs:'1.3rem', sm: '1.4rem', lg: '1.5rem', xl: '1.8rem'}, fontWeight: 'light', lineHeight: {xs: '1.4', sm: '1.3', md: '1.4', lg: '1.5'}, p: {xs: '0 2.7rem 2.5rem 2.7rem', sm: '1.5rem 5rem', md: '2rem 5.2rem 4rem 5.2rem', lg: '2rem 16rem 3rem 16rem', xl: '2.5rem 20rem 2.5rem 20rem'}, textAlign: 'left'}}>
               The Rhythm Messengers are an adaptable crew of highly animated drummers and entertainers who are ready to elevate the energy of your next event!<br/><br/>
               We are a collection of performers drawing from Chicago’s best drumming productions. We’ll tailor-make our show to best fit your event needs and venue.
             </Typography>
           </Grid>
         </Grid>
       </Box>
-      <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
+      <Divider sx={{height:1, backgroundColor: '#CCCCCC'}}/>
       <Box>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={8} lg={8}>
@@ -47,7 +47,7 @@ const About=() =>{
               Energy
             </Typography>
             <BatteryChargingFullIcon sx={{color: '#007FFF', fontSize: {xs: '4rem', sm: '4.5rem', md: '5rem', xl: '5.5rem'}, margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph sx={{color: 'white', fontSize: {xs:'1.2rem', sm: '1.3rem', lg: '1.4rem', xl: '1.6rem'}, fontWeight: 'light', lineHeight: {xs: '1.4', sm: '1.3', md: '1.4'}, p: {xs: '0 2.7rem 2.5rem 2.7rem', sm: '1.5rem 5rem', md: '2rem 5.2rem 4rem 5.2rem', lg: '2.5rem 7rem 5rem 7rem', xl: '2.7rem 12rem 5rem 12rem'}, textAlign: 'center'}}>
+            <Typography variant='body1' paragraph sx={{color: 'white', fontSize: {xs:'1.2rem', sm: '1.3rem', lg: '1.4rem', xl: '1.6rem'}, fontWeight: 'light', lineHeight: {xs: '1.4', sm: '1.3', md: '1.4'}, p: {xs: '0 2.7rem 2.5rem 2.7rem', sm: '1.5rem 5rem 2rem 5rem', md: '2rem 5.2rem 4rem 5.2rem', lg: '2.5rem 7rem 5rem 7rem', xl: '2.7rem 12rem 5rem 12rem'}, textAlign: 'center'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
            
@@ -56,31 +56,31 @@ const About=() =>{
             <CardMedia
               component='img'
               src='/media/RME-energy2.jpg'
-              alt='drum-energy'
+              alt='drumming with snares and cymbals'
               style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
         </Grid>
       </Box>
-      <Divider sx={{height: 6, backgroundColor: '#CCCCCC'}}/>
-      <Box style={{paddingTop: '10px', backgroundColor: '#141A1F'}}>
-        <Grid container spacing={2} style={{backgroundColor: '#141A1F'}}>
-          <Grid item xs={12} sm={12} md={4} lg={4} style={{display: 'flex', justifyContent:'flex-end', paddingTop:'0'}}>
+      <Divider sx={{backgroundColor: '#CCCCCC', height: 1}}/>
+      <Box className='box' sx={{backgroundColor: '#141A1F', padding: 0, margin:0}}>
+        <Grid className='grid' container spacing={2} style={{backgroundColor: '#141A1F', margin:0}}>
+          <Grid item xs={12} sm={12} md={4} lg={4} sx={{order: {xs:2,md:1}, display: 'flex', justifyContent:'flex-end', m:0, padding:'0 !important'}}>
             <CardMedia
               component='img'
               src='/media/RME-custom.jpg'
-              alt='bass-drum'
-              style={{maxWidth: '100%', height: 'auto', objectFit: 'cover', margin: 0, padding: 0}}
+              alt='drumming photo with snares and tenors'
+              sx={{maxWidth: '100%', objectFit: 'cover', margin: 0, p: 0}}
             >
             </CardMedia>
           </Grid>
-          <Grid item xs={12} sm={12} md={8} lg={8}>
-            <Typography variant='h2' align='center' gutterBottom style={{color: '#FF3300', fontSize: '48px', paddingTop: '70px', paddingBottom: '30px', paddingRight: '20px', paddingLeft: '20px'}}>
+          <Grid item xs={12} sm={12} md={8} lg={8} sx={{order: {xs:1,md:2}}}>
+            <Typography variant='h2' align='center' gutterBottom sx={{ fontSize: {xs: '3rem', xl: '4rem'}, color: '#FF3300', paddingTop: '70px', paddingBottom: '30px' }}>
               Custom Performances
             </Typography>
-            <SpeakerIcon style={{color: '#FF3300', fontSize: '60px', margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
-            <Typography variant='body1' paragraph style={{color: 'white', fontSize: '18px', fontWeight: '300', paddingLeft: '70px', paddingRight: '70px', paddingBottom: '30px', textAlign: 'center'}}>
+            <SpeakerIcon sx={{color: '#FF3300', fontSize: {xs: '4rem', sm: '4.5rem', md: '5rem', xl: '5.5rem'}, margin: '0 auto', display: 'block', paddingBottom: '50px'}}/>
+            <Typography variant='body1' paragraph sx={{color: 'white', fontSize: {xs:'1.2rem', sm: '1.3rem', lg: '1.4rem', xl: '1.6rem'}, fontWeight: 'light', lineHeight: {xs: '1.4', sm: '1.3', md: '1.4'}, p: {xs: '0 2.7rem 2.5rem 2.7rem', sm: '1.5rem 5rem 2rem 5rem', md: '2rem 5.2rem 4rem 5.2rem', lg: '2.5rem 7rem 5rem 7rem', xl: '2.7rem 12rem 5rem 12rem'}, textAlign: 'center'}}>
               Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away!
             </Typography>
           </Grid>
