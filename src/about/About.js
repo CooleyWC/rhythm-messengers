@@ -10,7 +10,6 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import Divider from '@mui/material/Divider';
 
 const About=() =>{
-
   const boxStyle = {
     backgroundColor: '#141A1F'
   }
@@ -50,7 +49,6 @@ const About=() =>{
             <Typography variant='body1' paragraph sx={{color: 'white', fontSize: {xs:'1.2rem', sm: '1.3rem', lg: '1.4rem', xl: '1.6rem'}, fontWeight: 'light', lineHeight: {xs: '1.4', sm: '1.3', md: '1.4'}, p: {xs: '0 2.7rem 2.5rem 2.7rem', sm: '1.5rem 5rem 2rem 5rem', md: '2rem 5.2rem 4rem 5.2rem', lg: '2.5rem 7rem 5rem 7rem', xl: '2.7rem 12rem 5rem 12rem'}, textAlign: 'center'}}>
               Ignite your event with our choreographed, high energy drumming that will get your guests jumping out of their chairs!
             </Typography>
-           
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} style={{display: 'flex', justifyContent:'flex-end'}}>
             <CardMedia
@@ -86,7 +84,6 @@ const About=() =>{
           </Grid>
         </Grid>
       </Box>
-     
         <Grid container style={{backgroundColor: '#f5f5f5', paddingTop: '50px'}}>
           <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
             <BusinessIcon style={{fontSize: '50px'}}/>
