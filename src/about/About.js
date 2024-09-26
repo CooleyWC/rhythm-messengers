@@ -23,8 +23,9 @@ const About=() =>{
   }
 
   return (
-    <div style={{ backgroundColor: '#141A1F' }}>
-      <Box style={boxStyle}>
+    <>
+    <Box sx={{backgroundColor: '#141A1F', padding: 0, margin: 0}}>
+    <Box>
       <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
         <Grid container>
           <Grid item xs={12} style={aboutTitleStyle}>
@@ -62,14 +63,14 @@ const About=() =>{
         </Grid>
       </Box>
       <Divider sx={{backgroundColor: '#CCCCCC', height: 1}}/>
-      <Box className='box' sx={{backgroundColor: '#141A1F', padding: 0, margin:0}}>
-        <Grid className='grid' container spacing={2} style={{backgroundColor: '#141A1F', margin:0}}>
-          <Grid item xs={12} sm={12} md={4} lg={4} sx={{order: {xs:2,md:1}, display: 'flex', justifyContent:'flex-end', m:0, padding:'0 !important'}}>
+      <Box >
+        <Grid container sx={{backgroundColor: '#141A1F', padding: 0, margin:0}}>
+          <Grid item xs={12} sm={12} md={4} lg={4} sx={{order: {xs:2,md:1}, display: 'flex', justifyContent:'flex-end', margin:0, padding:'0 !important'}}>
             <CardMedia
               component='img'
               src='/media/RME-custom.jpg'
               alt='drumming photo with snares and tenors'
-              sx={{maxWidth: '100%', objectFit: 'cover', margin: 0, p: 0}}
+              sx={{maxWidth: '100%', objectFit: 'cover', margin: 0, padding: 0}}
             >
             </CardMedia>
           </Grid>
@@ -82,7 +83,7 @@ const About=() =>{
               Your event will take center stage when the Rhythm Messengers make their appearance. Your guests will jump, stomp and dance your event away!
             </Typography>
           </Grid>
-        </Grid>
+        </Grid> 
       </Box>
         <Grid container style={{backgroundColor: '#f5f5f5', paddingTop: '50px'}}>
           <Grid item xs={12} sm={6} md={3} style={{textAlign: 'center', paddingTop: '40px'}}>
@@ -125,7 +126,7 @@ const About=() =>{
             </Typography>
           </Grid>
         </Grid>
-   
+     
       <Container>
         <Grid container spacing={1} style={{display: 'flex', justifyContent: 'center', paddingTop: '20px', paddingBottom: '20px'}}>
           <Grid item>
@@ -293,7 +294,8 @@ const About=() =>{
         </Grid>
         <Divider sx={{height: 1, backgroundColor: '#CCCCCC'}}/>
       </Container>
-    </div>
+    </Box>
+    </>
   );
 }
 
