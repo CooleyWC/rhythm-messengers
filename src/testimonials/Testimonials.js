@@ -26,7 +26,7 @@ function Testimonials() {
         <Grid container style={gridContainerStyle}>
           <ThumbUpIcon style={thumbsUpStyle} />
           {testimonialsData.map(({ content, author }) => (
-            <TCard content={content} author={author} />
+            <TCard key={author} content={content} author={author} />
           ))}
         </Grid>
       </Box>
