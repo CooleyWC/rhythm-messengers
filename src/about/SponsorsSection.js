@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, CardContent, Container, Divider } from "@mui/material";
 
-const Sponsors = () => {
+const SponsorsSection = () => {
   return (
     <Container>
       <Grid
@@ -272,4 +272,4 @@ const Sponsors = () => {
   );
 };
 
-export default Sponsors;
+export default SponsorsSection;
