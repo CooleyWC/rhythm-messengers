@@ -10,6 +10,8 @@ import {
   thumbsUpStyle,
 } from "./styles";
 import testimonialsData from "./testimonialData";
+import SEO from "../../components/SEO";
+import testimonialMetaData from "./testimonialMetaData";
 
 function Testimonials() {
   React.useEffect(() => {
@@ -18,6 +20,7 @@ function Testimonials() {
 
   return (
     <div id="testimonials">
+      <SEO title="Testimonials" meta={testimonialMetaData} />
       <NavBar />
       <Box id="testimonials" style={containerStyle}>
         <Typography variant="h4" style={titleStyle}>

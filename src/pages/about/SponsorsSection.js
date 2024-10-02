@@ -17,7 +17,7 @@ const SponsorsSection = () => {
       >
         {sponsorsData.map(({ src, alt }) => {
           return (
-            <Grid item>
+            <Grid item key={src}>
               <CardContent
                 component="img"
                 src={src}
