@@ -1,50 +1,48 @@
-import React from 'react';
-import {Grid, CardMedia} from '@mui/material';
-import Stack from '@mui/material/Stack';
+import React from "react";
+import { Grid, CardMedia } from "@mui/material";
+import Stack from "@mui/material/Stack";
 
 function Title() {
+  const gridContainerStyle = {
+    backgroundColor: "black",
+    margin: 0,
+    padding: 0,
+  };
 
-    const gridContainerStyle = {
-        backgroundColor: 'black',
-        margin: 0,
-        padding: 0,
-    }
+  const imageStyle = {
+    maxWidth: "55%",
+    maxHeight: "55%",
+    marginTop: "25px",
+    objectFit: "cover",
+  };
 
-    const imageStyle = {
-        maxWidth: '55%',
-        maxHeight: '55%',
-        marginTop: '25px',
-        objectFit: 'cover'
-    }
+  const titleStyle = {
+    maxWidth: "75%",
+    marginTop: "-55px",
+  };
 
-    const titleStyle = {
-        maxWidth: '75%',
-        marginTop: '-55px',
-    }
-
-    return (
-        <Grid 
-            container 
-            style={gridContainerStyle}
-        >
-            <Grid item>
-                <Stack alignItems='center'>
-                    <CardMedia
-                        component='img'
-                        src='media/RMELogo300-2-no-background.png' 
-                        alt='drum-logo' 
-                        style={imageStyle}
-                    />
-                    <CardMedia
-                        component='img'
-                        src='media/RMELogo300-2-titleonly-2.png'
-                        alt='rhythm-messengers'
-                        style={titleStyle}
-                    />
-                </Stack>
-            </Grid>
-        </Grid>
-    );
+  return (
+    <Grid container style={gridContainerStyle}>
+      <Grid item>
+        <Stack alignItems="center">
+          <CardMedia
+            component="img"
+            src="media/RMELogo300-2-no-background.png"
+            alt="drum-logo"
+            style={imageStyle}
+            loading="lazy"
+          />
+          <CardMedia
+            component="img"
+            src="media/RMELogo300-2-titleonly-2.png"
+            alt="rhythm-messengers"
+            style={titleStyle}
+            loading="lazy"
+          />
+        </Stack>
+      </Grid>
+    </Grid>
+  );
 }
 
 export default Title;
