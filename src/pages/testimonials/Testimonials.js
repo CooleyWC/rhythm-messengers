@@ -28,8 +28,8 @@ function Testimonials() {
         </Typography>
         <Grid container style={gridContainerStyle}>
           <ThumbUpIcon style={thumbsUpStyle} />
-          {testimonialsData.map(({ content, author }) => (
-            <TCard key={author} content={content} author={author} />
+          {testimonialsData.map(({ content, author, src, alt }) => (
+            <TCard key={author} content={content} author={author} src={src} alt={alt} />
           ))}
         </Grid>
       </Box>

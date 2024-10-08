@@ -1,6 +1,6 @@
 const containerStyle = {
   paddingTop: "50px",
-  backgroundColor: "black",
+  backgroundColor: "#f8f9fa",
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
