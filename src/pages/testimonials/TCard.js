@@ -1,29 +1,30 @@
 import React from 'react';
 import { CardContent, Typography, Paper, Divider, CardMedia, Box } from '@mui/material';
 
-const TCard = ({content, author, src, alt}) => {
+const TCard = ({content, author, src, alt, authorTitle}) => {
 
     const cardStyle = {
-        backgroundColor: '#e9ecef',
+        backgroundColor: '#f8f9fa',
         m: {
             xs: '.5rem 2rem .5rem 2rem',
-            sm: '1rem 3rem 1rem 3rem',
-            md: '1.2rem 4rem 1.2rem 4rem',
-            lg: '1.5rem 10rem 1.5rem 10rem',
-            xl: '1.6rem 15rem 1.6rem 15rem'
+            sm: '1rem 8rem 1rem 8rem',
+            md: '1.2rem 10rem 1.2rem 10rem',
+            lg: '1.5rem 12rem 1.5rem 12rem',
+            xl: '1.6rem 20rem 1.6rem 20rem'
 
         },
         p: {
-            xs: "1rem",
-            sm: "2rem",
+            xs: "1.5rem",
+            sm: "2.5rem",
             md: "3rem",
             lg: "4rem",
             xl: "5rem",
-          }
+          },
+        maxWidth: {sm: '70%', md: '60%', lg: '50%', xl: '40%'}
     }
 
     const contentStyle = {
-        color: '#001F3F',
+        color: '#0b2545',
         whiteSpace: 'pre-line',
         fontWeight: 300,
         fontSize: {
@@ -36,32 +37,32 @@ const TCard = ({content, author, src, alt}) => {
     }
 
     const authorStyle = {
-        color: '#001F3F',
+        color: '#134074',
         whiteSpace: 'pre-line',
-        fontWeight: 400,
-        fontSize: '1rem',
+        fontWeight: 700,
         fontSize: {
-            xs: "1rem",
-            sm: "1.1rem",
-            lg: "1.2rem",
-            xl: "1.3rem",
+            xs: "1.2rem",
+            sm: "1.3rem",
+            lg: "1.4rem",
+            xl: "2.1rem",
           },
     }
 
     const imageStyle = {
-        maxWidth: '300px',
-        maxHeight: '100px',
+        maxWidth: '250px',
+        maxHeight: '70px',
         
     }
 
     const imageContainerStyle = {
         display: 'flex',
-        justifyContent: {xs: 'center', lg: 'left'},
-        paddingTop: '1rem'
+        justifyContent: 'center',
+        paddingTop: {xs: '2rem', xl: '4rem'},
+        paddingLeft: {lg: '1rem'}
     }
 
     return (
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
             <Paper sx={cardStyle}>
                 <CardContent>
                     <Typography sx={contentStyle}>
@@ -69,6 +70,9 @@ const TCard = ({content, author, src, alt}) => {
                     </Typography>
                     <Typography sx={authorStyle}>
                         {author}
+                    </Typography>
+                    <Typography sx={contentStyle}>
+                        {authorTitle}
                     </Typography>
                 </CardContent>
                 <Divider />
@@ -78,7 +82,7 @@ const TCard = ({content, author, src, alt}) => {
                         src={src}
                         alt={alt}
                         loading="lazy"
-                        style={imageStyle}
+                        sx={imageStyle}
                         >
                     </CardMedia>
                 </Box>
