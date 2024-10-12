@@ -1,29 +1,34 @@
 import React from 'react';
-import { CardContent, Typography, Paper } from '@mui/material';
+import { CardContent, Typography, Paper, Divider, CardMedia, Box } from '@mui/material';
+import {cardStyle, contentStyle, authorStyle, imageStyle, imageContainerStyle} from './TCardStyles'
 
-const TCard = ({content, author}) => {
-
-    const cardStyle = {
-        backgroundColor: '#001F3F',
-        padding: '40px',
-        margin: '40px'
-    }
-
-    const typeStyle = {
-        color: 'white',
-        whiteSpace: 'pre-line',
-        fontWeight: 100,
-    }
+const TCard = ({content, author, src, alt, authorTitle}) => {
 
     return (
-        <div>
-            <Paper style={cardStyle}>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <Paper sx={cardStyle}>
                 <CardContent>
-                    <Typography style={typeStyle}>
-                        {content}
+                    <Typography sx={contentStyle}>
+                        &ldquo;{content}&rdquo;
+                    </Typography>
+                    <Typography sx={authorStyle}>
                         {author}
                     </Typography>
+                    <Typography sx={contentStyle}>
+                        {authorTitle}
+                    </Typography>
                 </CardContent>
+                <Divider />
+                <Box sx={imageContainerStyle}>
+                    <CardMedia
+                        component="img"
+                        src={src}
+                        alt={alt}
+                        loading="lazy"
+                        sx={imageStyle}
+                        >
+                    </CardMedia>
+                </Box>
             </Paper>
         </div>
     );

@@ -8,7 +8,7 @@ import {
   titleStyle,
   gridContainerStyle,
   thumbsUpStyle,
-} from "./styles";
+} from "./testimonialsStyles";
 import testimonialsData from "./testimonialData";
 import SEO from "../../components/SEO";
 import testimonialMetaData from "./testimonialMetaData";
@@ -22,14 +22,14 @@ function Testimonials() {
     <div id="testimonials">
       <SEO title="Testimonials" meta={testimonialMetaData} />
       <NavBar />
-      <Box id="testimonials" style={containerStyle}>
-        <Typography variant="h4" style={titleStyle}>
+      <Box id="testimonials" sx={containerStyle}>
+        <Typography variant="h4" sx={titleStyle}>
           What People Say
         </Typography>
-        <Grid container style={gridContainerStyle}>
-          <ThumbUpIcon style={thumbsUpStyle} />
-          {testimonialsData.map(({ content, author }) => (
-            <TCard key={author} content={content} author={author} />
+        <Grid container sx={gridContainerStyle}>
+          <ThumbUpIcon sx={thumbsUpStyle} />
+          {testimonialsData.map(({ content, author, src, alt, authorTitle }) => (
+            <TCard key={author} content={content} author={author} src={src} alt={alt} authorTitle={authorTitle} />
           ))}
         </Grid>
       </Box>

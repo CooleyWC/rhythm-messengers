@@ -1,6 +1,6 @@
 const containerStyle = {
   paddingTop: "50px",
-  backgroundColor: "black",
+  backgroundColor: "#e9ecef",
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
@@ -10,8 +10,9 @@ const containerStyle = {
 };
 
 const titleStyle = {
-  fontSize: "48px",
-  color: "#f77a00",
+  fontSize: {xs: '2rem', md: "3rem"},
+  color: "#134074",
+  paddingTop: '20px',
   marginBottom: "20px",
 };
 
@@ -21,8 +22,8 @@ const gridContainerStyle = {
 };
 
 const thumbsUpStyle = {
-  color: "white",
-  fontSize: "40px",
+  color: "#134074",
+  fontSize: "3rem",
   paddingBottom: "20px",
 };
 
