@@ -75,6 +75,8 @@ const EnergySection = () => {
             src="/media/RME-energy2.jpg"
             alt="drumming with snares and cymbals"
             loading="lazy"
+            width={300}
+            height={300}
             style={{
               maxWidth: "100%",
               height: "auto",
