@@ -72,7 +72,7 @@ const EnergySection = () => {
         >
           <CardMedia
             component="img"
-            src="/media/RME-energy2.jpg"
+            src="/media/RME-energy2.webp"
             alt="drumming with snares and cymbals"
             loading="lazy"
             width={300}
