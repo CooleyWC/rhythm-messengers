@@ -26,12 +26,15 @@ const CustomPerformancesSection = () => {
         >
           <CardMedia
             component="img"
-            src="/media/RME-custom.jpg"
+            src="/media/RME-custom.webp"
             alt="drumming photo with snares and tenors"
             loading="lazy"
+            width={300}
+            height={300}
             sx={{
               maxWidth: "100%",
               objectFit: "cover",
+              height: "auto",
               margin: 0,
               padding: 0,
             }}
