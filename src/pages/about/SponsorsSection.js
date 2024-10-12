@@ -22,10 +22,14 @@ const SponsorsSection = () => {
                 component="img"
                 src={src}
                 alt={alt}
+                width={300}
+                height={300}
                 loading="lazy"
                 style={{
                   padding: "0",
                   margin: "0",
+                  width: "auto",
+                  height: "auto",
                   maxHeight: "60px",
                   maxWidth: "100%",
                 }}
