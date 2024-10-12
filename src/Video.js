@@ -13,13 +13,12 @@ function Video() {
     <Grid container style={gridContainerStyle}>
       <CardMedia
         component="video"
-        src="/media/RMEWebsiteTeaser.mp4"
+        src="/media/freecompress-RMEWebsiteTeaser.mp4"
         autoPlay
         loop
         muted
         title="RM-promo-video"
         playsInline
-        onLoad={lazy}
       ></CardMedia>
     </Grid>
   );
