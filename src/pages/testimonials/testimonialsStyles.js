@@ -10,8 +10,9 @@ const containerStyle = {
 };
 
 const titleStyle = {
-  fontSize: "3rem",
+  fontSize: {xs: '2rem', md: "3rem"},
   color: "#134074",
+  paddingTop: '20px',
   marginBottom: "20px",
 };
 
