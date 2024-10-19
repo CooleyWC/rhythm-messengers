@@ -1,12 +1,12 @@
 import "./index.css";
 import Title from "./Title";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import Video from "./Video";
 import About from "./pages/about/About";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import React, { useCallback, useEffect } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const aboutRef = React.useRef(null);

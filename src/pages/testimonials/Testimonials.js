@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/navbar/NavBar";
 import { Grid, Box, Typography } from "@mui/material";
 import TCard from "./TCard";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
@@ -28,9 +28,18 @@ function Testimonials() {
         </Typography>
         <Grid container sx={gridContainerStyle}>
           <ThumbUpIcon sx={thumbsUpStyle} />
-          {testimonialsData.map(({ content, author, src, alt, authorTitle }) => (
-            <TCard key={author} content={content} author={author} src={src} alt={alt} authorTitle={authorTitle} />
-          ))}
+          {testimonialsData.map(
+            ({ content, author, src, alt, authorTitle }) => (
+              <TCard
+                key={author}
+                content={content}
+                author={author}
+                src={src}
+                alt={alt}
+                authorTitle={authorTitle}
+              />
+            )
+          )}
         </Grid>
       </Box>
     </div>

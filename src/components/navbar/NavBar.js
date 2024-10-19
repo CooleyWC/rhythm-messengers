@@ -9,29 +9,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import pages from "./links";
 
-const pages = [
-  {
-    page: "About",
-    route: "/#About",
-  },
-
-  {
-    page: "Testimonials",
-    route: "/Testimonials",
-  },
-  {
-    page: "Contact",
-    route: "/#Contact",
-  },
-  {
-    page: "Instagram",
-    route: "https://www.instagram.com/rhythmmessengers/",
-  },
-];
-
-function NavBar({ handleScroll }) {
+function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -96,7 +77,7 @@ function NavBar({ handleScroll }) {
               }}
             >
               {pages.map(({ page, route }) => (
-                <MenuItem key={page} component={NavLink} to={route}>
+                <MenuItem key={page} component={Link} to={route}>
                   {page}
                 </MenuItem>
               ))}
@@ -134,7 +115,7 @@ function NavBar({ handleScroll }) {
             {pages.map(({ page, route }) => (
               <Button
                 key={page}
-                component={NavLink}
+                component={Link}
                 to={route}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
