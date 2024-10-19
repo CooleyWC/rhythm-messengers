@@ -8,10 +8,6 @@ const routes = [
     element: <App />,
     errorElement: <ErrorPage />,
   },
-  // {
-  //   path: "/:id",
-  //   element: <App />,
-  // },
   {
     path: "/Testimonials",
     element: <Testimonials />,
