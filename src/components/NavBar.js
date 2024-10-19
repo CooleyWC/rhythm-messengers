@@ -14,23 +14,24 @@ import { Link, NavLink } from "react-router-dom";
 const pages = [
   {
     page: "About",
-    route: "/About",
+    route: "/#About",
   },
-  {
-    page: "Photos",
-    route: "https://www.instagram.com/rhythmmessengers/",
-  },
+
   {
     page: "Testimonials",
     route: "/Testimonials",
   },
   {
     page: "Contact",
-    route: "/Contact",
+    route: "/#Contact",
+  },
+  {
+    page: "Instagram",
+    route: "https://www.instagram.com/rhythmmessengers/",
   },
 ];
 
-function NavBar({ handleClick }) {
+function NavBar({ handleScroll }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -95,16 +96,7 @@ function NavBar({ handleClick }) {
               }}
             >
               {pages.map(({ page, route }) => (
-                <MenuItem
-                  key={page}
-                  component={NavLink}
-                  to={route}
-                  onClick={() => {
-                    if (handleClick) {
-                      handleClick(page);
-                    }
-                  }}
-                >
+                <MenuItem key={page} component={NavLink} to={route}>
                   {page}
                 </MenuItem>
               ))}
@@ -145,11 +137,6 @@ function NavBar({ handleClick }) {
                 component={NavLink}
                 to={route}
                 sx={{ my: 2, color: "white", display: "block" }}
-                onClick={() => {
-                  if (handleClick) {
-                    handleClick(page);
-                  }
-                }}
               >
                 {page}
               </Button>
