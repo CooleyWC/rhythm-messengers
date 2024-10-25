@@ -64,8 +64,8 @@ const Form = ({ handleSubmit, handleChange, formValues }) => {
                   display: "flex",
                   gap: "var(--Textarea-paddingBlock)",
                   pt: "var(--Textarea-paddingBlock)",
-                  borderTop: "1px solid",
-                  borderColor: "divider",
+                  // borderTop: "1px solid",
+                  // borderColor: "divider",
                   flex: "auto",
                 }}
               >

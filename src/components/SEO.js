@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 const SEO = ({ title, meta }) => {
   return (
     <Helmet>
+      {/* remove title */}
       <title>{title}</title>
       {meta.length > 0 &&
         meta.map(({ name, content }) => {
