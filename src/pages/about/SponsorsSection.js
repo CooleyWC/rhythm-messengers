@@ -1,46 +1,88 @@
 import React from "react";
-import { Grid, CardContent, Container, Divider } from "@mui/material";
+import { Divider, Box, Typography } from "@mui/material";
 import sponsorsData from "./sponsersData";
+import {keyframes} from '@mui/system'
+
+const slide = keyframes `
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-50%)
+  }
+`
+const cardStyle = {
+  height: '100px', 
+  width: '200px',
+  display: 'inline-block',
+  margin: '0 10px',
+}
+
+const imgStyle = {
+  height: '100px', 
+  width: '200px',
+}
 
 const SponsorsSection = () => {
+
   return (
-    <Container>
-      <Grid
-        container
-        spacing={1}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "20px",
-          paddingBottom: "20px",
-        }}
-      >
-        {sponsorsData.map(({ src, alt }) => {
-          return (
-            <Grid item key={src}>
-              <CardContent
-                component="img"
-                src={src}
-                alt={alt}
-                width={300}
-                height={300}
-                loading="lazy"
-                style={{
-                  padding: "0",
-                  margin: "0",
-                  width: "auto",
-                  height: "auto",
-                  maxHeight: "60px",
-                  maxWidth: "100%",
-                }}
-              ></CardContent>
-            </Grid>
-          );
-        })}
-      </Grid>
-      <Divider sx={{ height: 1, backgroundColor: "#CCCCCC" }} />
-    </Container>
-  );
-};
+    <>
+    <Box sx={{display: 'flex', justifyContent: 'center', paddingTop: '46px'}}>
+      <Typography variant="h2" gutterBottom sx={{fontSize: "48px", color: "#f77a00"}}>
+        Clients
+      </Typography>
+    </Box>
+    <Box sx={{
+          height: '100px',
+          paddingBottom: '56px', 
+          backgroundColor: '#141A1F',
+          overflow: 'hidden', 
+          width: '90%',
+          marginInline: 'auto',
+          position: 'relative',
+          marginTop: '2rem',
+          whiteSpace: 'nowrap',
+          '&:hover > .innerContainer': {
+            animationPlayState: 'paused'
+          },
+          '&:before, &:after': {
+            position: 'absolute',
+            width: '150px',
+            height: '100%',
+            top: 0,
+            zIndex: '2',
+            content: '""'
+          },
+          '&:before': {
+            left: 0,
+            background: 'linear-gradient(to left, rgba(255,255,255, 0), #141A1F)',
+          },
+          '&:after': {
+            right: 0,
+            background: 'linear-gradient(to right, rgba(255,255,255, 0), #141A1F)',
+          }
+
+          }}>
+            <Box 
+              className="innerContainer"
+              sx={{
+              display: 'inline-block', 
+              animation: `65s infinite linear ${slide}`
+              }}>
+              {[...sponsorsData, ...sponsorsData].map(({src, alt}, index)=>(
+                <Box key={index} sx={cardStyle}>
+                  <Box
+                    component='img'
+                    sx={imgStyle}
+                    src={src}
+                    alt={alt}
+                  />
+                </Box>
+              ))}
+            </Box>
+      </Box>
+    <Divider sx={{backgroundColor: '#CCCC', height: 1}}/>
+</>
+)}
 
 export default SponsorsSection;

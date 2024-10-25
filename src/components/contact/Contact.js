@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <Container
-      sx={{ color: "white", paddingBottom: "46px", paddingTop: "46px" }}
+      sx={{ color: "white", paddingBottom: "46px", paddingTop: "46px"}}
     >
       <CustomAlert isAlert={isAlert} />
       <Form
