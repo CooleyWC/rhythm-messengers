@@ -14,8 +14,6 @@ const slide = keyframes `
 const cardStyle = {
   height: '100px', 
   width: '200px',
-  backgroundColor: 'gray',
-  borderRadius: '6px',
   display: 'inline-block',
   margin: '0 10px',
 }
@@ -30,12 +28,13 @@ const SponsorsSection = () => {
   return (
     <>
     <Box sx={{display: 'flex', justifyContent: 'center', paddingTop: '46px'}}>
-      <Typography variant="h2" gutterBottom sx={{fontSize: "48px", color: "#f77a00"}}>Clients</Typography>
+      <Typography variant="h2" gutterBottom sx={{fontSize: "48px", color: "#f77a00"}}>
+        Clients
+      </Typography>
     </Box>
-
     <Box sx={{
           height: '100px',
-          paddingBottom: '46px', 
+          paddingBottom: '56px', 
           backgroundColor: '#141A1F',
           overflow: 'hidden', 
           width: '90%',
@@ -46,25 +45,21 @@ const SponsorsSection = () => {
           '&:hover > .innerContainer': {
             animationPlayState: 'paused'
           },
-          '&:before': {
+          '&:before, &:after': {
             position: 'absolute',
             width: '150px',
             height: '100%',
             top: 0,
-            left: 0,
-            background: 'linear-gradient(to left, rgba(255,255,255, 0), #141A1F)',
             zIndex: '2',
             content: '""'
           },
+          '&:before': {
+            left: 0,
+            background: 'linear-gradient(to left, rgba(255,255,255, 0), #141A1F)',
+          },
           '&:after': {
-            position: 'absolute',
-            width: '150px',
-            height: '100%',
-            top: 0,
             right: 0,
             background: 'linear-gradient(to right, rgba(255,255,255, 0), #141A1F)',
-            zIndex: '2',
-            content: '""'
           }
 
           }}>
@@ -72,7 +67,7 @@ const SponsorsSection = () => {
               className="innerContainer"
               sx={{
               display: 'inline-block', 
-              animation: `60s infinite linear ${slide}`
+              animation: `65s infinite linear ${slide}`
               }}>
               {[...sponsorsData, ...sponsorsData].map(({src, alt}, index)=>(
                 <Box key={index} sx={cardStyle}>
@@ -85,8 +80,8 @@ const SponsorsSection = () => {
                 </Box>
               ))}
             </Box>
-        </Box>
-      <Divider sx={{backgroundColor: '#CCCC', height: 1}}/>
+      </Box>
+    <Divider sx={{backgroundColor: '#CCCC', height: 1}}/>
 </>
 )}
 
