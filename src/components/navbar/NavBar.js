@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import pages from "./links";
 
 function NavBar() {
@@ -78,7 +79,7 @@ function NavBar() {
             >
               {pages.map(({ page, route }) => (
                 <MenuItem key={page} component={Link} to={route}>
-                  {page}
+                  {page === "Instagram" ? <InstagramIcon /> : page}
                 </MenuItem>
               ))}
             </Menu>
@@ -117,9 +118,15 @@ function NavBar() {
                 key={page}
                 component={Link}
                 to={route}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  "&:hover": {
+                    backgroundColor: "rgba(25, 118, 210, 0.13) !important",
+                  },
+                }}
               >
-                {page}
+                {page === "Instagram" ? <InstagramIcon /> : page}
               </Button>
             ))}
           </Box>
