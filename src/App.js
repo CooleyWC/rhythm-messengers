@@ -1,38 +1,41 @@
 import "./index.css";
 import Title from "./Title";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import Video from "./Video";
 import About from "./pages/about/About";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
-  const aboutRef = React.useRef(null);
-  const contactRef = React.useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const location = useLocation();
+  const [isRendered, setIsRendered] = useState(false);
 
-  const { id } = useParams();
+  useEffect(() => {
+    setIsRendered(true);
+  }, []);
 
-  React.useEffect(() => {
-    handleClick(id);
-  }, [id]);
-
-  const handleClick = (id) => {
-    if (id === "Contact") {
+  useEffect(() => {
+    if (location.hash === "#Contact" && contactRef.current) {
       contactRef.current.scrollIntoView({
         behavior: "smooth",
         inline: "start",
       });
     }
-    if (id === "About") {
-      aboutRef.current.scrollIntoView({ behavior: "smooth", inline: "start" });
+    if (location.hash === "#About" && aboutRef.current) {
+      aboutRef.current.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
     }
-  };
+  }, [location.hash, isRendered]);
 
   return (
     <div>
-      <NavBar handleClick={handleClick} />
+      <NavBar />
       <Title />
       <Video />
       <div

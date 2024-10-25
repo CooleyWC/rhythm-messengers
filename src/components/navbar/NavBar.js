@@ -9,28 +9,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import pages from "./links";
 
-const pages = [
-  {
-    page: "About",
-    route: "/About",
-  },
-  {
-    page: "Photos",
-    route: "https://www.instagram.com/rhythmmessengers/",
-  },
-  {
-    page: "Testimonials",
-    route: "/Testimonials",
-  },
-  {
-    page: "Contact",
-    route: "/Contact",
-  },
-];
-
-function NavBar({ handleClick }) {
+function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -95,17 +78,8 @@ function NavBar({ handleClick }) {
               }}
             >
               {pages.map(({ page, route }) => (
-                <MenuItem
-                  key={page}
-                  component={NavLink}
-                  to={route}
-                  onClick={() => {
-                    if (handleClick) {
-                      handleClick(page);
-                    }
-                  }}
-                >
-                  {page}
+                <MenuItem key={page} component={Link} to={route}>
+                  {page === "Instagram" ? <InstagramIcon /> : page}
                 </MenuItem>
               ))}
             </Menu>
@@ -142,16 +116,17 @@ function NavBar({ handleClick }) {
             {pages.map(({ page, route }) => (
               <Button
                 key={page}
-                component={NavLink}
+                component={Link}
                 to={route}
-                sx={{ my: 2, color: "white", display: "block" }}
-                onClick={() => {
-                  if (handleClick) {
-                    handleClick(page);
-                  }
+                sx={{
+                  my: 2,
+                  color: "white",
+                  "&:hover": {
+                    backgroundColor: "rgba(25, 118, 210, 0.13) !important",
+                  },
                 }}
               >
-                {page}
+                {page === "Instagram" ? <InstagramIcon /> : page}
               </Button>
             ))}
           </Box>

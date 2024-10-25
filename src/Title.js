@@ -36,7 +36,6 @@ function Title() {
             style={imageStyle}
             width={300}
             height={300}
-            loading="lazy"
           />
           <CardMedia
             component="img"
@@ -45,7 +44,6 @@ function Title() {
             src="media/RMELogo300-2-titleonly-2.webp"
             alt="rhythm-messengers"
             style={titleStyle}
-            loading="lazy"
           />
         </Stack>
       </Grid>

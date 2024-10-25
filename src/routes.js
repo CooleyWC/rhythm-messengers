@@ -9,10 +9,6 @@ const routes = [
     errorElement: <ErrorPage />,
   },
   {
-    path: "/:id",
-    element: <App />,
-  },
-  {
     path: "/Testimonials",
     element: <Testimonials />,
   },
