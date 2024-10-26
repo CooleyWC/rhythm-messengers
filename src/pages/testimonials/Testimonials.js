@@ -20,9 +20,7 @@ function Testimonials() {
 
   return (
     <div id="testimonials">
-      {/* delete title prop below */}
-      <SEO title="Testimonials" meta={testimonialMetaData} />
-      <NavBar />
+      <SEO meta={testimonialMetaData} />
       <Box id="testimonials" sx={containerStyle}>
         <Typography variant="h4" sx={titleStyle}>
           What People Say
