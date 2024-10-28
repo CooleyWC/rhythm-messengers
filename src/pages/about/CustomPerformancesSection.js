@@ -29,8 +29,6 @@ const CustomPerformancesSection = () => {
             src="/media/RME-custom.webp"
             alt="drumming photo with snares and tenors"
             loading="lazy"
-            width={300}
-            height={300}
             sx={{
               maxWidth: "100%",
               objectFit: "cover",
