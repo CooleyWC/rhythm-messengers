@@ -34,7 +34,7 @@ const CustomPerformancesSection = () => {
             sx={{
               maxWidth: "100%",
               objectFit: "cover",
-              height: "auto",
+              height: "100%",
               margin: 0,
               padding: 0,
             }}

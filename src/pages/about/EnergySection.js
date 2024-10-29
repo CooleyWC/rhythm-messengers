@@ -68,7 +68,9 @@ const EnergySection = () => {
           sm={12}
           md={4}
           lg={4}
-          style={{ display: "flex", justifyContent: "flex-end" }}
+          sx={{ display: "flex", 
+          justifyContent: "flex-end", 
+         }}
         >
           <CardMedia
             component="img"
@@ -77,9 +79,10 @@ const EnergySection = () => {
             loading="lazy"
             width={300}
             height={300}
-            style={{
+            sx={{
               maxWidth: "100%",
-              height: "auto",
+              width: 'auto',
+              height: "100%",
               objectFit: "cover",
               margin: 0,
               padding: 0,
