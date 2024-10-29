@@ -68,16 +68,21 @@ const EnergySection = () => {
           sm={12}
           md={4}
           lg={4}
-          style={{ display: "flex", justifyContent: "flex-end" }}
+          sx={{ display: "flex", 
+          justifyContent: "flex-end", 
+         }}
         >
           <CardMedia
             component="img"
             src="/media/RME-energy2.webp"
             alt="drumming with snares and cymbals"
             loading="lazy"
-            style={{
+            width={300}
+            height={300}
+            sx={{
               maxWidth: "100%",
-              height: "auto",
+              width: 'auto',
+              height: "100%",
               objectFit: "cover",
               margin: 0,
               padding: 0,
