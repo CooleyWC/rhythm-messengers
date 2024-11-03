@@ -37,11 +37,12 @@ const Form = ({ handleSubmit, handleChange, formValues }) => {
       </Grid>
       <Grid>
         <FormControl>
-          <FormLabel>Email</FormLabel>
+          {/* <FormLabel>Email</FormLabel> */}
           <Input
-            name="email"
-            placeholder="Enter Your Email"
-            value={formValues.email}
+            type="text"
+            // name="email"
+            // placeholder="Enter Your Email"
+            value={formValues.text}
             onChange={handleChange}
             fullWidth={false}
             required

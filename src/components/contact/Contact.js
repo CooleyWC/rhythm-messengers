@@ -6,7 +6,7 @@ import Form from "./Form";
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({
-    email: "",
+    text: "",
     message: "",
   });
   const [isAlert, setIsAlert] = useState(null);
@@ -19,7 +19,7 @@ const Contact = () => {
     const publicKey = "airrzkTHnHtHmPrKl";
 
     const templateParams = {
-      from_email: formValues.email,
+      from_email: formValues.text,
       to_name: "Rhythm Messengers",
       message: formValues.message,
     };
@@ -32,7 +32,7 @@ const Contact = () => {
         (res) => {
           console.log("success", res);
           setFormValues({
-            email: "",
+            text: "",
             message: "",
           });
           setIsAlert(true);
@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <Container
-      sx={{ color: "white", paddingBottom: "46px", paddingTop: "46px"}}
+      sx={{ color: "white", paddingBottom: "46px", paddingTop: "46px" }}
     >
       <CustomAlert isAlert={isAlert} />
       <Form
