@@ -49,7 +49,7 @@ const SponsorsSection = () => {
           overflow: "hidden",
           width: "90%",
           marginInline: "auto",
-          position: "relative",
+          // position: "relative",
           marginTop: "2rem",
           whiteSpace: "nowrap",
           "&:hover > .innerContainer": {
