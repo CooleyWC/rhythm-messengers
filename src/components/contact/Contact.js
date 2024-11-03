@@ -6,7 +6,7 @@ import Form from "./Form";
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({
-    text: "",
+    email: "",
     message: "",
   });
   const [isAlert, setIsAlert] = useState(null);
@@ -19,7 +19,7 @@ const Contact = () => {
     const publicKey = "airrzkTHnHtHmPrKl";
 
     const templateParams = {
-      from_email: formValues.text,
+      from_email: formValues.email,
       to_name: "Rhythm Messengers",
       message: formValues.message,
     };
@@ -32,7 +32,7 @@ const Contact = () => {
         (res) => {
           console.log("success", res);
           setFormValues({
-            text: "",
+            email: "",
             message: "",
           });
           setIsAlert(true);
