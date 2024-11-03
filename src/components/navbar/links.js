@@ -8,10 +8,10 @@ const pages = [
     page: "Testimonials",
     route: "/Testimonials",
   },
-  // {
-  //   page: "Contact",
-  //   route: "/#Contact",
-  // },
+  {
+    page: "Contact",
+    route: "/#Contact",
+  },
   {
     page: "Instagram",
     route: "https://www.instagram.com/rhythmmessengers/",
