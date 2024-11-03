@@ -19,12 +19,12 @@ import {
   Check,
 } from "@mui/icons-material";
 
-const Form = ({ handleSubmit, handleChange, formValues }) => {
+const Form = ({ formik }) => {
   const [italic, setItalic] = React.useState(false);
   const [fontWeight, setFontWeight] = React.useState("normal");
   const [anchorEl, setAnchorEl] = React.useState(null);
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={formik.handleSubmit}>
       <Grid>
         <Typography
           variant="h2"
@@ -37,28 +37,27 @@ const Form = ({ handleSubmit, handleChange, formValues }) => {
       </Grid>
       <Grid>
         <FormControl>
-          {/* <FormLabel>Email</FormLabel> */}
+          <FormLabel>Email</FormLabel>
+          {formik.errors.email && <div>{formik.errors.email}</div>}
           <Input
-            type="text"
-            // name="email"
-            // placeholder="Enter Your Email"
-            value={formValues.text}
-            onChange={handleChange}
+            name="email"
+            placeholder="Enter Your Email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
             fullWidth={false}
-            required
           />
         </FormControl>
       </Grid>
       <Grid>
         <FormControl>
           <FormLabel>Message</FormLabel>
+          {formik.errors.message && <div>{formik.errors.message}</div>}
           <Textarea
             name="message"
-            onChange={handleChange}
-            value={formValues.message}
+            onChange={formik.handleChange}
+            value={formik.values.message}
             placeholder="Message"
             minRows={3}
-            required
             endDecorator={
               <Box
                 sx={{

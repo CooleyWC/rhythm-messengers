@@ -44,14 +44,14 @@ function App() {
         }}
       />
       <About />
-      {/* <div
+      <div
         ref={contactRef}
         style={{
           backgroundColor: "#141A1F",
         }}
       >
         <Contact />
-      </div> */}
+      </div>
       <Footer />
     </div>
   );

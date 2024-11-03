@@ -43,14 +43,13 @@ const SponsorsSection = () => {
       </Box>
       <Box
         sx={{
-          padding: "15px",
           height: "100px",
           paddingBottom: "56px",
           backgroundColor: "#141A1F",
           overflow: "hidden",
           width: "90%",
           marginInline: "auto",
-          // position: "relative",
+          position: "relative",
           marginTop: "2rem",
           whiteSpace: "nowrap",
           "&:hover > .innerContainer": {
