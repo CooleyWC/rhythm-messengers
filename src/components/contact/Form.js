@@ -36,15 +36,17 @@ const Form = ({ formik }) => {
         </Typography>
       </Grid>
       <Grid>
+        {/**third remove the whole email input */}
         <FormControl>
           <FormLabel>Email</FormLabel>
           {formik.errors.email && <div>{formik.errors.email}</div>}
           <Input
             name="email"
-            placeholder="Enter Your Email"
+            placeholder="Enter Your Email" //second remove everything that say email in it
             value={formik.values.email}
             onChange={formik.handleChange}
             fullWidth={false}
+            type="text"
           />
         </FormControl>
       </Grid>
