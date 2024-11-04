@@ -38,17 +38,15 @@ const Contact = () => {
             publicKey: process.env.REACT_APP_PUBLIC_KEY,
           }
         )
-        .then(
-          (res) => {
-            console.log("success", res);
-            resetForm();
-            setIsAlert(true);
-          },
-          (error) => {
-            console.error("error", error);
-            setIsAlert(false);
-          }
-        );
+        .then((res) => {
+          console.log("success", res);
+          resetForm();
+          setIsAlert(true);
+        })
+        .catch((err) => {
+          console.log("err", err);
+          setIsAlert(false);
+        });
     },
   });
 
