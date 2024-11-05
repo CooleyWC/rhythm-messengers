@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../components/navbar/NavBar";
 import { Grid, Box, Typography } from "@mui/material";
 import TCard from "./TCard";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";

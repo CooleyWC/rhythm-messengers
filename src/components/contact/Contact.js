@@ -6,6 +6,8 @@ import Form from "./Form";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
+
+
 const Contact = () => {
   const [isAlert, setIsAlert] = useState(null);
 
@@ -49,6 +51,7 @@ const Contact = () => {
         });
     },
   });
+
 
   return (
     <Container
