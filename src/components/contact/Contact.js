@@ -25,10 +25,6 @@ const Contact = () => {
     },
     validationSchema: schema,
     onSubmit: (values, { resetForm }) => {
-      const serviceId = "service_g3c0vfn";
-      const templateId = "template_raegahg";
-      const publicKey = "airrzkTHnHtHmPrKl";
-
       const templateParams = {
         from_email: values.email,
         to_name: "Rhythm Messengers",
@@ -36,20 +32,23 @@ const Contact = () => {
       };
 
       emailjs
-        .send(serviceId, templateId, templateParams, {
-          publicKey: publicKey,
-        })
-        .then(
-          (res) => {
-            console.log("success", res);
-            resetForm();
-            setIsAlert(true);
-          },
-          (error) => {
-            console.error("error", error);
-            setIsAlert(false);
+        .send(
+          process.env.REACT_APP_SERVICEID,
+          process.env.REACT_APP_TEMPLATEID,
+          templateParams,
+          {
+            publicKey: process.env.REACT_APP_PUBLIC_KEY,
           }
-        );
+        )
+        .then((res) => {
+          console.log("success", res);
+          resetForm();
+          setIsAlert(true);
+        })
+        .catch((err) => {
+          console.log("err", err);
+          setIsAlert(false);
+        });
     },
   });
 
