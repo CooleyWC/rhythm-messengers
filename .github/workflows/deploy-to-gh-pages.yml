@@ -18,7 +18,7 @@ jobs:
           npm run-script build
         env:
           REACT_APP_SERVICEID: ${{ secrets.REACT_APP_SERVICEID}}
-          REACT_APP_TEMPLATEID: ${{ secrects.REACT_APP_TEMPLATEID}}
+          REACT_APP_TEMPLATEID: ${{ secrets.REACT_APP_TEMPLATEID}}
           REACT_APP_PUBLIC_KEY: ${{ secrets.REACT_APP_PUBLIC_KEY}} 
 
       - name: Deploy 🚀
