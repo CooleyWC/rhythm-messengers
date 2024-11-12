@@ -37,7 +37,7 @@ const Contact = () => {
           process.env.REACT_APP_TEMPLATEID,
           templateParams,
           {
-            publicKey: process.env.REACT_APP_PUBLIC_KEY,
+            publicKey: "airrzkTHnHtHmPrKl",
           }
         )
         .then((res) => {
