@@ -21,6 +21,17 @@ jobs:
           REACT_APP_TEMPLATEID: ${{ secrets.REACT_APP_TEMPLATEID}}
           REACT_APP_PUBLIC_KEY: ${{ secrets.REACT_APP_PUBLIC_KEY}} 
 
+      - name: Verify Variables
+        run: |
+          echo "SERVICEID is set"
+          echo "TEMPLATEID is set"
+          echo "PUBLIC_KEY is set"
+        env:
+          REACT_APP_SERVICEID: ${{ secrets.REACT_APP_SERVICEID}}
+          REACT_APP_TEMPLATEID: ${{ secrets.REACT_APP_TEMPLATEID}}
+          REACT_APP_PUBLIC_KEY: ${{ secrets.REACT_APP_PUBLIC_KEY}}
+
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
