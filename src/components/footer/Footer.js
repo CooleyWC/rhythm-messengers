@@ -8,15 +8,15 @@ import { Typography } from '@mui/material';
 function Footer() {
     return (
           <Box style={{backgroundColor:'#f5f5f5' }}>
-            <Grid container spacing={2} sx={{justifyContent:'space-around'}}>
-              <Grid item xs={12} sm={6} md={3} textAlign='center'>
+            <Grid container spacing={2} sx={{justifyContent: 'center'}}>
+              <Grid item xs={12} sm={6} md={3} textAlign='left' sx={{maxWidth:{xs:'200px', sm:'none'}}}>
                 <Card
                   name="THOMAS BENKO"
                   title="Band Leader"
                   email="tabdrums@gmail.com"
                   phoneNumber="" />
               </Grid>
-              <Grid item xs={12} sm={6} md={3} textAlign='center'>
+              <Grid item xs={12} sm={6} md={3} textAlign='left' sx={{maxWidth:{xs:'200px', sm:'none'}}}>
                 <Card
                   name="LIVE ART INTERNATIONAL"
                   title="Agent - Dayna Malow"
@@ -24,7 +24,7 @@ function Footer() {
                   phoneNumber="1-800-985-9330" />
               </Grid>
             </Grid>
-            <Typography style={{fontSize: '12px', textAlign: 'center', marginBottom:'0', marginTop: '20px'}}>© 2024 Rhythm Messengers. Designed by BlueWave Codeworks</Typography>
+            <Typography style={{fontSize: '12px', textAlign: 'center', marginBottom:'0', marginTop: '20px'}}>© 2024 Rhythm Messengers. | Designed by BlueWave Codeworks.</Typography>
           </Box>
     );
 }

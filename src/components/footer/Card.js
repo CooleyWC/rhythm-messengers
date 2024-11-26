@@ -4,10 +4,10 @@ import React from 'react'
 const Card = ({name, title, email, phoneNumber}) => {
   return (
     <div>
-      <Typography style={{fontSize: '22px'}}>{name}</Typography>
-      <Typography>{title}</Typography>
-      <Typography>{email}</Typography>
-      {phoneNumber.length > 0 && <Typography>{phoneNumber}</Typography>}
+      <Typography sx={{fontSize: '1rem'}}>{name}</Typography>
+      <Typography sx={{fontSize: '0.9rem', fontWeight: 350}}>{title}</Typography>
+      <Typography sx={{fontSize: '0.9rem', fontWeight: 350}}>{email}</Typography>
+      {phoneNumber.length > 0 && <Typography sx={{fontSize: '0.9rem', fontWeight: 350}}>{phoneNumber}</Typography>}
     </div>
   )
 }
