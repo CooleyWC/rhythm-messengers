@@ -1,15 +1,16 @@
-import { Typography } from '@mui/material'
+import { Typography, Box } from '@mui/material'
 import React from 'react'
 
 const Card = ({name, title, email, phoneNumber}) => {
   return (
-    <div>
-      <Typography sx={{fontSize: {xs:'0.88rem', sm:'1rem'}, fontWeight: 700}}>{name}</Typography>
-      <Typography sx={{fontSize: {xs:'0.75rem',sm:'0.95rem'}, fontWeight: 400}}>{title}</Typography>
-      <Typography sx={{fontSize: {xs:'0.75rem', sm:'0.9rem'}, fontWeight: 400}}>{email}</Typography>
-      {phoneNumber.length > 0 && <Typography sx={{fontSize: {xs:'0.75rem',sm:'0.9rem'}, fontWeight: 400}}>{phoneNumber}</Typography>}
-    </div>
+    <Box sx={{width: '216px', px:4, py:{xs:3, sm:4},}}>
+      <Typography sx={{fontSize: {xs:'0.95rem', sm:'1rem'}, fontWeight: 700}}>{name}</Typography>
+      <Typography sx={{fontSize: {xs:'0.9rem',sm:'0.95rem'}, fontWeight: 400}}>{title}</Typography>
+      <Typography sx={{fontSize: {xs:'0.9rem', sm:'0.95rem'}, fontWeight: 400}}>{email}</Typography>
+      {phoneNumber.length > 0 && <Typography sx={{fontSize: {xs:'0.9rem',sm:'0.95rem'}, fontWeight: 400}}>{phoneNumber}</Typography>}
+    </Box>
   )
 }
 
 export default Card
+
