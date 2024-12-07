@@ -26,7 +26,7 @@ const CustomPerformancesSection = () => {
         >
           <CardMedia
             component="img"
-            src="/media/RME-custom.webp"
+            src="media/RME-custom-optimized.webp"
             alt="drumming photo with snares and tenors"
             loading="lazy"
             width={300}

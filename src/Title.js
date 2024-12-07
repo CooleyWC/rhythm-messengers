@@ -1,7 +1,6 @@
 import React from "react";
 import { CardMedia, Box } from "@mui/material";
 
-
 function Title() {
 
   const containerStyle = {
@@ -13,7 +12,6 @@ function Title() {
     height: '100vh',
     backgroundColor: 'black',
     gap: '1rem',
-    boxSizing: 'border-box',
   }
   
   const logoStyle = {
@@ -21,7 +19,6 @@ function Title() {
     maxWidth:{xs:'90%', sm:'80%', md:'70%', lg: '70%', xl: '70%'},
     maxHeight:{xs:'90%', sm:'80%', md:'70%', lg: '70%', xl: '70%'},
     objectFit: 'contain',
-    
   }
 
   return (
