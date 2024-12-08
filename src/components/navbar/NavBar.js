@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import pages from "./links";
 
+
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -41,7 +42,7 @@ function NavBar() {
               fontWeight: 700,
               fontSize: '1.3rem',
               letterSpacing: ".3rem",
-              color: "#02010a",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -56,9 +57,9 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="#02010a"
+              sx={{color:"black"}}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: '2rem', }}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -99,7 +100,7 @@ function NavBar() {
               fontSize: {xs:'1rem', sm: '1.2rem', md:'1.3rem'},
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "#02010a",
+              color: "black",
               textDecoration: "none",
               overflow: "visible",
             }}
@@ -120,18 +121,19 @@ function NavBar() {
                 key={page}
                 component={Link}
                 to={route}
+                aria-label={page=== "Instagram" ? "Instagram" : page}
                 sx={{
                   fontWeight:500,
                   fontSize: '1rem',
                   letterSpacing: 2,
                   my: 2,
-                  color: "#02010a",
+                  color: "black",
                   "&:hover": {
                     backgroundColor: "rgba(25, 118, 210, 0.13) !important",
                   },
                 }}
               >
-                {page === "Instagram" ? <InstagramIcon sx={{fontSize:'1.7rem'}}/> : page}
+                {page === "Instagram" ? <InstagramIcon sx={{fontSize:'1.5rem'}}/> : page}
               </Button>
             ))}
           </Box>
