@@ -66,8 +66,6 @@ const Form = ({ formik }) => {
                   display: "flex",
                   gap: "var(--Textarea-paddingBlock)",
                   pt: "var(--Textarea-paddingBlock)",
-                  // borderTop: "1px solid",
-                  // borderColor: "divider",
                   flex: "auto",
                 }}
               >
@@ -116,10 +114,12 @@ const Form = ({ formik }) => {
                   type="submit"
                   sx={{
                     ml: "auto",
+                    color: "black",
                     backgroundColor: "#f77a00",
                     transition: "all 0.3s ease",
                     "&:hover": {
-                      backgroundColor: "#4a4a4a",
+                      backgroundColor: "#141A1F",
+                      color: '#f77a00'
                     },
                   }}
                 >

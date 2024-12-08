@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import pages from "./links";
 
+
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -25,7 +26,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar style={{ position: "fixed" }} sx={{ backgroundColor: "#f77a00" }}>
+    <AppBar style={{ position: "fixed" }} sx={{ backgroundColor: "#f77a00"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* This Typography element renders on desktop screen size */}
@@ -39,8 +40,9 @@ function NavBar() {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
+              fontSize: '1.3rem',
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -55,9 +57,9 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{color:"black"}}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: '2rem', }}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -74,7 +76,7 @@ function NavBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", md: "none" }
               }}
             >
               {pages.map(({ page, route }) => (
@@ -95,9 +97,10 @@ function NavBar() {
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
+              fontSize: {xs:'1rem', sm: '1.2rem', md:'1.3rem'},
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "black",
               textDecoration: "none",
               overflow: "visible",
             }}
@@ -118,15 +121,19 @@ function NavBar() {
                 key={page}
                 component={Link}
                 to={route}
+                aria-label={page=== "Instagram" ? "Instagram" : page}
                 sx={{
+                  fontWeight:500,
+                  fontSize: '1rem',
+                  letterSpacing: 2,
                   my: 2,
-                  color: "white",
+                  color: "black",
                   "&:hover": {
                     backgroundColor: "rgba(25, 118, 210, 0.13) !important",
                   },
                 }}
               >
-                {page === "Instagram" ? <InstagramIcon /> : page}
+                {page === "Instagram" ? <InstagramIcon sx={{fontSize:'1.5rem'}}/> : page}
               </Button>
             ))}
           </Box>
