@@ -73,6 +73,7 @@ const Form = ({ formik }) => {
                   variant="plain"
                   color="neutral"
                   onClick={(event) => setAnchorEl(event.currentTarget)}
+                  aria-label='Set font weight to either lighter, normal, or bold.'
                 >
                   <FormatBold />
                   <KeyboardArrowDown fontSize="md" />
@@ -94,6 +95,7 @@ const Form = ({ formik }) => {
                         setAnchorEl(null);
                       }}
                       sx={{ fontWeight: weight }}
+                      aria-label={`Set font weight to ${weight === '200' ? 'lighter': weight}`}
                     >
                       <ListItemDecorator>
                         {fontWeight === weight && <Check fontSize="sm" />}
@@ -107,6 +109,7 @@ const Form = ({ formik }) => {
                   color={italic ? "primary" : "neutral"}
                   aria-pressed={italic}
                   onClick={() => setItalic((bool) => !bool)}
+                  aria-label='Toggle italic'
                 >
                   <FormatItalic />
                 </IconButton>
