@@ -32,14 +32,14 @@ const Form = ({ formik }) => {
           variant="h2"
           align="center"
           gutterBottom
-          sx={{ fontSize: "48px", color: "#f77a00" }}
+          sx={{ fontSize: { xs: "3rem", xl: "4rem" }, color: "#f77a00" }}
         >
           Contact
         </Typography>
       </Grid>
-      <Grid>
+      <Grid sx={{marginBottom: '1rem'}}>
         <FormControl>
-          <FormLabel>Email</FormLabel>
+          <FormLabel sx={{color: 'white', fontSize: '1rem', padding: '0.2rem 0', letterSpacing: 1 }}>Email</FormLabel>
           {formik.errors.email && <div>{formik.errors.email}</div>}
           <Input
             name="email"
@@ -47,12 +47,17 @@ const Form = ({ formik }) => {
             value={formik.values.email}
             onChange={formik.handleChange}
             fullWidth={false}
+            sx={{
+              input: {
+                color: '#000000',
+                }
+            }}
           />
         </FormControl>
       </Grid>
       <Grid>
         <FormControl>
-          <FormLabel>Message</FormLabel>
+          <FormLabel sx={{color: 'white', fontSize: '1rem', padding: '0.2rem 0', letterSpacing: 1}}>Message</FormLabel>
           {formik.errors.message && <div>{formik.errors.message}</div>}
           <Textarea
             name="message"
@@ -110,12 +115,15 @@ const Form = ({ formik }) => {
                   aria-pressed={italic}
                   onClick={() => setItalic((bool) => !bool)}
                   aria-label='Toggle italic'
+                  // sx={{padding: '1rem'}}
                 >
                   <FormatItalic />
                 </IconButton>
                 <Button
                   type="submit"
                   sx={{
+                    padding: '0.5rem',
+                    letterSpacing: 1,
                     ml: "auto",
                     color: "black",
                     backgroundColor: "#f77a00",
@@ -134,6 +142,7 @@ const Form = ({ formik }) => {
               minWidth: 300,
               fontWeight,
               fontStyle: italic ? "italic" : "initial",
+              color: '#000000',
             }}
           />
         </FormControl>
