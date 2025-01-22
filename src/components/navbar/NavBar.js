@@ -53,11 +53,20 @@ function NavBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="open navigation menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{color:"black"}}
+              sx={{color:"black",
+                "&:focus": {
+                  outline: "2px solid #1976d2",
+                  outlineOffset: "2px"
+                },
+                "&:focus-visible": {
+                  outline: "2px solid #1976d2",
+                  outlineOffset: "2px"
+                },
+              }}
             >
               <MenuIcon sx={{ fontSize: '2rem', }}/>
             </IconButton>
@@ -80,7 +89,20 @@ function NavBar() {
               }}
             >
               {pages.map(({ page, route }) => (
-                <MenuItem key={page} component={Link} to={route}>
+                <MenuItem 
+                  key={page} 
+                  component={Link} 
+                  to={route}
+                  sx={{"&focus": {
+                    outline: "2px solid #1976d2",
+                    outlineOffset: "2px"
+                  },
+                  "&:focus-visible": {
+                  outline: "2px solid #1976d2",
+                  outlineOffset: "2px"
+                },
+                }}
+                  >
                   {page === "Instagram" ? <InstagramIcon /> : page}
                 </MenuItem>
               ))}
@@ -131,6 +153,14 @@ function NavBar() {
                   "&:hover": {
                     backgroundColor: "rgba(25, 118, 210, 0.13) !important",
                   },
+                  "&focus": {
+                    outline: "2px solid #1976d2",
+                    outlineOffset: "2px"
+                  },
+                  "&:focus-visible": {
+                  outline: "2px solid #1976d2",
+                  outlineOffset: "2px"
+                }
                 }}
               >
                 {page === "Instagram" ? <InstagramIcon sx={{fontSize:'1.5rem'}}/> : page}
